@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.3)  3 JAN 2013 22:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.3)  4 JAN 2013 12:24
 entering extended mode
 **Article.tex
 (C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.tex
@@ -89,31 +89,56 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 34.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 34.
-(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.bbl) [1{C:/Pr
-ogramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 
+LaTeX Warning: Citation `farenzena:collabem' on page 1 undefined on input line 
+54.
+
+
+LaTeX Warning: Citation `lamb:memenet' on page 1 undefined on input line 54.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+
+LaTeX Warning: Citation `farenzena:collabem' on page 1 undefined on input line 
+62.
+
+
+LaTeX Warning: Citation `farenzena:collabem' on page 1 undefined on input line 
+70.
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 
 ]
+(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.bbl) [2
+
+]
 (C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.aux) ) 
 Here is how much of TeX's memory you used:
- 357 strings out of 494045
- 4799 string characters out of 3148382
- 50890 words of memory out of 3000000
- 3692 multiletter control sequences out of 15000+200000
- 17563 words of font info for 48 fonts, out of 3000000 for 9000
+ 369 strings out of 494045
+ 4955 string characters out of 3148382
+ 56890 words of memory out of 3000000
+ 3700 multiletter control sequences out of 15000+200000
+ 23006 words of font info for 55 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 25i,10n,19p,162b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,10n,23p,1213b,242s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Pro
 gram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
-rw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.p
-fb>
-Output written on Article.pdf (1 page, 44603 bytes).
+2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on Article.pdf (2 pages, 107043 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 50 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
