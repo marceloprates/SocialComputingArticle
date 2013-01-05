@@ -63,7 +63,7 @@ The experiments conducted by~\cite{farenzena:collabem} point out a series of obs
 
 \subsubsection{Pick Most Filled}
 
-This rule employs the intuitive strategy of copying from the neighbour with the most filled sudoku, namely the most complete solution
+This rule employs the intuitive strategy of copying from the neighbour with the most filled sudoku, namely the most complete solution.
 
 \subsubsection{Pick Among First}
 
@@ -77,9 +77,81 @@ In sudoku strategy literature, as in chess, we find multiple techniques with ico
 
 \subsubsection{Only Choice}
 
+This technique proceeds to mark a sudoku cell with a value only if this cell is the last blank cell on its row, column or $3 \times 3$ block. For instance, the {\em only choice} rule would mark cell $(1,2)$ with value $4$ in the below sudoku puzzle:
+
+\[ \left( \begin{array}{ccccccccc}
+  &   &   & 7 &   &   &   & 5 & 8 \\
+  & 5 & 6 & 2 & 1 & 8 & 7 & 9 & 3 \\
+  &   &   &   &   &   & 1 &   &   \\
+  &   &   &   &   &   &   & 8 & 1 \\
+  &   &   & 3 & 7 & 6 &   &   &   \\
+9 & 6 &   &   &   &   &   &   &   \\
+  &   & 5 &   &   &   &   &   &   \\
+  &   & 4 &   & 2 & 1 & 8 & 3 &   \\
+8 & 7 &   &   &   & 3 &   &   &   \end{array}  \right)\]
+
+\[ \left( \begin{array}{ccccccccc}
+  &   &   & 7 &   &   &   & 5 & 8 \\
+{\bf 4} & 5 & 6 & 2 & 1 & 8 & 7 & 9 & 3 \\
+  &   &   &   &   &   & 1 &   &   \\
+  &   &   &   &   &   &   & 8 & 1 \\
+  &   &   & 3 & 7 & 6 &   &   &   \\
+9 & 6 &   &   &   &   &   &   &   \\
+  &   & 5 &   &   &   &   &   &   \\
+  &   & 4 &   & 2 & 1 & 8 & 3 &   \\
+8 & 7 &   &   &   & 3 &   &   &   \end{array}  \right)\]
+
 \subsubsection{Single Possibility}
 
+This rule marks a sudoku cell with value $v$ only if $v$ is the single possible value to mark that cell. The other values must have been eliminated through a process of verifying that they are all present in the span encompassing the cell's row, column and $3 \times 3$ block. For instance, the {\em single possibility} rule would mark cell $(4,1)$ with value $7$ in the below sudoku puzzle, since the values $1$,$2$,$3$,$4$,$5$ and $8$ were already present in the cell's column (leaving the possibilities $6$,$7$ and $9$) and the values $6$ and $9$ were already present in the cells' row (leaving the single possibility $7$).
+
+\[ \left( \begin{array}{ccccccccc}
+8 & 2 & 5 & 6 & 3 & 1 & 9 & 7 & 4 \\
+  & 6 & 7 &   & 2 & 4 &   &   & 8 \\
+4 &   &   &   &   & 7 & 6 &   & 2 \\
+  & 5 & 9 &   & 4 & 8 & 2 & 6 & 1 \\
+1 &   & 8 & 2 & 6 & 9 & 7 & 4 & 5 \\
+  & 4 &   & 1 & 7 & 5 &   & 8 &   \\
+3 &   & 1 & 4 &   &   &   &   &   \\
+5 &   &   &   &   & 3 & 4 &   &   \\
+2 & 9 & 4 &   &   & 6 & 5 &   &   \end{array}  \right)\]
+
+\[ \left( \begin{array}{ccccccccc}
+8 & 2 & 5 & 6 & 3 & 1 & 9 & 7 & 4 \\
+  & 6 & 7 &   & 2 & 4 &   &   & 8 \\
+4 &   &   &   &   & 7 & 6 &   & 2 \\
+{\bf 7} & 5 & 9 &   & 4 & 8 & 2 & 6 & 1 \\
+1 &   & 8 & 2 & 6 & 9 & 7 & 4 & 5 \\
+  & 4 &   & 1 & 7 & 5 &   & 8 &   \\
+3 &   & 1 & 4 &   &   &   &   &   \\
+5 &   &   &   &   & 3 & 4 &   &   \\
+2 & 9 & 4 &   &   & 6 & 5 &   &   \end{array}  \right)\]
+
 \subsubsection{Two out of Three}
+
+This rule works on a group of three contiguous $3 \times 3$ blocks. It aims to find a value $v$ such that $v$ is present in two of the three $3 \times 3$ blocks encompassed by the group, but missing on the third. It then proceeds by enumerating all the candidate cells (namely the empty cells) on this block, and then eliminating from this set all the cells that are encompassed by the rows or columns in which $v$ is placed on the other two blocks. If the resulting set has cardinality $1$, the rule has successfully found one cell to mark. For instance, the {\em two out of three} rule would mark cell $(2,9)$ with value $1$.
+
+\[ \left( \begin{array}{ccccccccc}
+  &   & 9 & 5 & 1 &   &   & 6 & 2 \\
+6 & 3 & 4 &   &   &   & 5 & 9 &   \\
+1 & 2 & 5 & 6 & 3 & 9 & 7 &   & 4 \\
+2 & 5 &   & 8 & 4 & 7 & 6 & 3 &   \\
+4 & 6 &   &   & 5 &   &   & 1 & 7 \\
+  & 8 & 7 & 3 & 6 & 1 &   & 2 & 5 \\
+5 &   & 6 & 1 & 7 & 3 & 2 & 4 & 8 \\
+  & 1 & 2 &   &   &   & 9 & 7 & 6 \\
+7 & 4 &   &   & 9 & 6 & 1 &   &   \end{array}  \right)\]
+
+\[ \left( \begin{array}{ccccccccc}
+  &   & 9 & 5 & 1 &   &   & 6 & 2 \\
+6 & 3 & 4 &   &   &   & 5 & 9 & {\bf 1} \\
+1 & 2 & 5 & 6 & 3 & 9 & 7 &   & 4 \\
+2 & 5 &   & 8 & 4 & 7 & 6 & 3 &   \\
+4 & 6 &   &   & 5 &   &   & 1 & 7 \\
+  & 8 & 7 & 3 & 6 & 1 &   & 2 & 5 \\
+5 &   & 6 & 1 & 7 & 3 & 2 & 4 & 8 \\
+  & 1 & 2 &   &   &   & 9 & 7 & 6 \\
+7 & 4 &   &   & 9 & 6 & 1 &   &   \end{array}  \right)\]
 
 \subsubsection{Naked Twins}
 
@@ -92,8 +164,8 @@ Results
 Conclusions
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
-%%\bibliographystyle{named}
-\bibliography{Bibliography}
+\bibliographystyle{named}
+\bibliography{Article}
 
 \end{document}
 

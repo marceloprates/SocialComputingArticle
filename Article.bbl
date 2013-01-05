@@ -1,0 +1,18 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Farenzena \bgroup \em et al.\egroup
+  }{2011}]{farenzena:collabem}
+Daniel Farenzena, Ricardo Araujo, and Luis Lamb.
+\newblock Collaboration emergence in social networks with informational natural
+  selection.
+\newblock In {\em 2011 IEEE International Conference on Privacy, Security,
+  Risk, and Trust, and IEEE International Conference on Social Computing},
+  2011.
+
+\bibitem[\protect\citeauthoryear{Lamb and Araujo}{2008}]{lamb:memenet}
+Luis Lamb and Ricardo Araujo.
+\newblock Memetic networks: analyzing the effects of network properties in
+  multi-agent performance.
+\newblock In {\em AAAI'08}, pages 3--8, 2008.
+
+\end{thebibliography}
