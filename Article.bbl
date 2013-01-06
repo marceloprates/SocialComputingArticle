@@ -15,4 +15,9 @@ Luis Lamb and Ricardo Araujo.
   multi-agent performance.
 \newblock In {\em AAAI'08}, pages 3--8, 2008.
 
+\bibitem[\protect\citeauthoryear{Mason and Watts}{2011}]{mason:collablearnet}
+Winter Mason and Duncan~J. Watts.
+\newblock Collaborative learning in networks.
+\newblock 2011.
+
 \end{thebibliography}
