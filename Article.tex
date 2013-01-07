@@ -83,85 +83,23 @@ We inserted this behaviour into our model by firstly generating a random orderin
 
 \subsection{Appropriation Rules}
 
-In sudoku strategy literature, as in chess, we find multiple techniques with iconic names. Some popular examples are {\em naked singles}, {\em naked twins}, {\em swordfish}. These strategies intend to, given a sudoku puzzle in a partial state of completion, generate movements to mark blank cells of the puzzle, as "{\em mark cell 1 of column 3 with value 5}". We reproduced a variety of these strategies, modelling each one of them as a function that maps a sudoku partial solution to a set of movements.
+In sudoku strategy literature, as in chess, we find multiple techniques with iconic names~\cite{davis:mathsudoku}. Some popular examples are {\em naked singles}, {\em naked twins}, {\em swordfish}. These strategies intend to, given a sudoku puzzle in a partial state of completion, generate movements to mark blank cells of the puzzle, as "{\em mark cell 1 of column 3 with value 5}". We reproduced a variety of these strategies, modelling each one of them as a function that maps a sudoku partial solution to a set of movements.
 
 \subsubsection{Only Choice}
 
-This technique marks a sudoku cell with a value only if this cell is the last blank cell on its row, column or $3 \times 3$ block. For instance, the {\em only choice} rule would mark cell $(1,2)$ with value $4$ in the below sudoku puzzle:
+This technique marks a sudoku cell with a value only if this cell is the last blank cell on its row, column or $3 \times 3$ block.
 
-\[ \left( \begin{array}{ccccccccc}
-  &   &   & 7 &   &   &   & 5 & 8 \\
-  & 5 & 6 & 2 & 1 & 8 & 7 & 9 & 3 \\
-  &   &   &   &   &   & 1 &   &   \\
-  &   &   &   &   &   &   & 8 & 1 \\
-  &   &   & 3 & 7 & 6 &   &   &   \\
-9 & 6 &   &   &   &   &   &   &   \\
-  &   & 5 &   &   &   &   &   &   \\
-  &   & 4 &   & 2 & 1 & 8 & 3 &   \\
-8 & 7 &   &   &   & 3 &   &   &   \end{array}  \right)\]
+\subsubsection{Naked Singles}
 
-\[ \left( \begin{array}{ccccccccc}
-  &   &   & 7 &   &   &   & 5 & 8 \\
-{\bf 4} & 5 & 6 & 2 & 1 & 8 & 7 & 9 & 3 \\
-  &   &   &   &   &   & 1 &   &   \\
-  &   &   &   &   &   &   & 8 & 1 \\
-  &   &   & 3 & 7 & 6 &   &   &   \\
-9 & 6 &   &   &   &   &   &   &   \\
-  &   & 5 &   &   &   &   &   &   \\
-  &   & 4 &   & 2 & 1 & 8 & 3 &   \\
-8 & 7 &   &   &   & 3 &   &   &   \end{array}  \right)\]
+This rule marks a sudoku cell with value $v$ only if $v$ is the single possible value to mark that cell. The other values must have been eliminated through a process of verifying that they are all present in the span encompassing the cell's row, column and $3 \times 3$ block.
 
-\subsubsection{Single Possibility}
+\subsubsection{Hidden Singles}
 
-This rule marks a sudoku cell with value $v$ only if $v$ is the single possible value to mark that cell. The other values must have been eliminated through a process of verifying that they are all present in the span encompassing the cell's row, column and $3 \times 3$ block. For instance, the {\em single possibility} rule would mark cell $(4,1)$ with value $7$ in the below sudoku puzzle, since the values $1$, $2$, $3$, $4$, $5$ and $8$ were already present in the cell's column (leaving the possibilities $6$, $7$ and $9$). Additionally, the values $6$ and $9$ were already present in the cells' row, thus leaving the single possibility $7$.
-
-\[ \left( \begin{array}{ccccccccc}
-8 & 2 & 5 & 6 & 3 & 1 & 9 & 7 & 4 \\
-  & 6 & 7 &   & 2 & 4 &   &   & 8 \\
-4 &   &   &   &   & 7 & 6 &   & 2 \\
-  & 5 & 9 &   & 4 & 8 & 2 & 6 & 1 \\
-1 &   & 8 & 2 & 6 & 9 & 7 & 4 & 5 \\
-  & 4 &   & 1 & 7 & 5 &   & 8 &   \\
-3 &   & 1 & 4 &   &   &   &   &   \\
-5 &   &   &   &   & 3 & 4 &   &   \\
-2 & 9 & 4 &   &   & 6 & 5 &   &   \end{array}  \right)\]
-
-\[ \left( \begin{array}{ccccccccc}
-8 & 2 & 5 & 6 & 3 & 1 & 9 & 7 & 4 \\
-  & 6 & 7 &   & 2 & 4 &   &   & 8 \\
-4 &   &   &   &   & 7 & 6 &   & 2 \\
-{\bf 7} & 5 & 9 &   & 4 & 8 & 2 & 6 & 1 \\
-1 &   & 8 & 2 & 6 & 9 & 7 & 4 & 5 \\
-  & 4 &   & 1 & 7 & 5 &   & 8 &   \\
-3 &   & 1 & 4 &   &   &   &   &   \\
-5 &   &   &   &   & 3 & 4 &   &   \\
-2 & 9 & 4 &   &   & 6 & 5 &   &   \end{array}  \right)\]
+This rule is similar to the {\em naked singles} rule. It is able to mark cells with more than one candidate value by looking for cells that are the only cells in their row, column or $3 \times 3$ block that can hold a particular value.
 
 \subsubsection{Two out of Three}
 
-This rule applies to groups of three contiguous $3 \times 3$ blocks. It aims to find a value $v$ such that $v$ is present in two of the three $3 \times 3$ blocks encompassed by the group, but missing on the third. It proceeds by enumerating all the candidate cells - namely the empty cells - on this block, and then, by eliminating from this set all the cells that are encompassed by the rows or columns in which $v$ is placed on the other two blocks. If the resulting set has cardinality $1$, the rule has successfully found one cell to mark. For instance, the {\em two out of three} rule would mark cell $(2,9)$ with value $1$ on the below sudoku.
-
-\[ \left( \begin{array}{ccccccccc}
-  &   & 9 & 5 & 1 &   &   & 6 & 2 \\
-6 & 3 & 4 &   &   &   & 5 & 9 &   \\
-1 & 2 & 5 & 6 & 3 & 9 & 7 &   & 4 \\
-2 & 5 &   & 8 & 4 & 7 & 6 & 3 &   \\
-4 & 6 &   &   & 5 &   &   & 1 & 7 \\
-  & 8 & 7 & 3 & 6 & 1 &   & 2 & 5 \\
-5 &   & 6 & 1 & 7 & 3 & 2 & 4 & 8 \\
-  & 1 & 2 &   &   &   & 9 & 7 & 6 \\
-7 & 4 &   &   & 9 & 6 & 1 &   &   \end{array}  \right)\]
-
-\[ \left( \begin{array}{ccccccccc}
-  &   & 9 & 5 & 1 &   &   & 6 & 2 \\
-6 & 3 & 4 &   &   &   & 5 & 9 & {\bf 1} \\
-1 & 2 & 5 & 6 & 3 & 9 & 7 &   & 4 \\
-2 & 5 &   & 8 & 4 & 7 & 6 & 3 &   \\
-4 & 6 &   &   & 5 &   &   & 1 & 7 \\
-  & 8 & 7 & 3 & 6 & 1 &   & 2 & 5 \\
-5 &   & 6 & 1 & 7 & 3 & 2 & 4 & 8 \\
-  & 1 & 2 &   &   &   & 9 & 7 & 6 \\
-7 & 4 &   &   & 9 & 6 & 1 &   &   \end{array}  \right)\]
+This rule applies to groups of three contiguous $3 \times 3$ blocks. It aims to find a value $v$ such that $v$ is present in two of the three $3 \times 3$ blocks encompassed by the group, but missing on the third. It proceeds by enumerating all the candidate cells - namely the empty cells - on this block, and then, by eliminating from this set all the cells that are encompassed by the rows or columns in which $v$ is placed on the other two blocks. If the resulting set has cardinality $1$, the rule has successfully found one cell to mark.
 
 \subsubsection{Naked Twins}
 

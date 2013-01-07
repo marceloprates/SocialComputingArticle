@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{Davis}{2007}]{davis:mathsudoku}
+Tom Davis.
+\newblock The mathematics of sudoku.
+\newblock November 2007.
+
 \bibitem[\protect\citeauthoryear{Farenzena \bgroup \em et al.\egroup
   }{2011}]{farenzena:collabem}
 Daniel Farenzena, Ricardo Araujo, and Luis Lamb.
@@ -18,6 +23,6 @@ Luis Lamb and Ricardo Araujo.
 \bibitem[\protect\citeauthoryear{Mason and Watts}{2011}]{mason:collablearnet}
 Winter Mason and Duncan~J. Watts.
 \newblock Collaborative learning in networks.
-\newblock 2011.
+\newblock November 2011.
 
 \end{thebibliography}
