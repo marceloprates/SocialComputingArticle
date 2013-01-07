@@ -39,21 +39,19 @@ morprates@inf.ufrgs.br}
 
 \section{Introduction}
 
-For years multi-agent systems have been used to research cooperation as a tool for problem-solving. Recently, however, there has been an increasing interest in the use of human beings as problem-solving agents. Several studies have been conducted in which subjects are connected in a network with the goal of searching for the solution of a specific problem, and those have helped shed some light on the way humans interact in order to solve problems.
+For years multi-agent systems have been used to research cooperation as a tool for problem-solving. Recently, however, there has been an increasing interest in the study of human beings as problem-solving agents. Several experiments have been conducted in which subjects are connected in a network with the goal of collectively solving a specific problem, and those have helped shed some light on the way humans interact to solve problems. However, those studies are limited to obtaining observations on human behaviour and formulating hypotheses, being unable to explain with certainty that behaviour. In this paper, we use a multi-agent based simulation to complement the study of human computation, as a way of explaining the strategies used by humans and understanding their consequences in a cooperative environment.
 
-The experiments conducted by \cite{farenzena:collabem} had human beings trying to solve constraint satisfaction problems, namely Boolean Satisfiability (SAT) and the popular \emph{Sudoku} game, with individuals connected through the network being able to exchange partial solutions of the problem in question. The behaviour observed in that study has provided evidence that human beings in a cooperative problem-solving environment might not evaluate solutions proposed by their peers, instead choosing the most readily available one.
-
-Another result of those observations is that there is a higher probability of individuals copying peers' solutions when those are shared by several neighbours, referred to as an evidence of \emph{conformist behaviour}. A similar behaviour was observed in \cite{mason:collablearnet} for a different problem.
-
-We have built a multi-agent system that simulates the experiments of \cite{farenzena:collabem} with the aim of verifying whether the strategies employed by humans are competitive with other heuristics. After identifying the points in which those are lacking, we will then propose methods to increase the efficiency of human problem-solving networks.
+Human beings are known to be able to easily perform tasks which are still generally difficult for computers, such as natural language processing and image recognition. However, it would be useful to be able to apply human computation to more classical computer problems with precise definitions and algorithms, but which are still computationally intensive. The different sets of abilities between computers and humans suggest that human computation might provide a new approach to those problems, one that computers can't easily apply. However, we still don't know the limits of human abilities in problem-solving and how they compare to more traditional techniques. To take full advantage of human problem-solving skills, we must learn their limitations. In order to obtain that knowledge, we have developed a multi-agent system that simulates human behaviour according to findings of experiments performed in humans.
 
 \section{Background}
 
-Background
+The experiments conducted by \cite{farenzena:collabem} had human beings trying to solve constraint satisfaction problems, namely Boolean Satisfiability (SAT) and the popular \emph{Sudoku} game, with individuals connected through the network being able to exchange partial solutions of the problem in question. The behaviour observed in that study has provided evidence that human beings in a cooperative problem-solving environment might not evaluate solutions proposed by their peers, instead choosing the most readily available one.
+
+Another result of those observations is that there is a higher probability of individuals copying peers' solutions when those are shared by several neighbours, referred to by the authors as \emph{conformist behaviour}. A similar behaviour was observed in \cite{mason:collablearnet} for a different problem.
 
 \section{Contribution}
 
-Contribution
+We have built a multi-agent system that simulates the experiments of \cite{farenzena:collabem}, using the model of human behaviour proposed by them. We adapted that behaviour into a set of rules which we modeled in the \emph{Memetic Network} model proposed by \cite{lamb:memenet}. For simplicity, we limited our experiments to the Sudoku problem. Our goal is verifying whether the strategies employed by humans are competitive with other heuristics. After identifying the points in which those are lacking, we will then propose methods to increase the efficiency of human problem-solving networks.
 
 \section{System Overview}
 
