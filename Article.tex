@@ -63,7 +63,7 @@ A {\em Memetic Network Algorithm} is composed of an ordered set of $N$ agents, e
 
 Our solution adapts the {\em Memetic Newtork} technique - originally intended for use in optimization problems - to the context of constraint satisfaction problems. In this specific case ({\em Sudoku} solving), we treat problems with one unique solution. To deal with this scenario, we propose a {\em Memetic Network} variation in which each agent encodes not a complete, but a partial solution to the problem.
 
-Our solution employs a fixed topology for the agent network and models cooperation through a set of {\em aggregation rules} and reasoning through a set of {\em appropriation rules}. Our aggregation rules specify how {\em Sudoku} partial solutions are copied from agent to agent, while our appropriation rules specify how agents increment these solutions with {\em Sudoku} solving techniques such as naked singles, swordfish, etc.
+Our solution employs a fixed topology for the agent network and models cooperation through a set of {\em aggregation rules} and reasoning through a set of {\em appropriation rules}. Our aggregation rules specify how {\em Sudoku} partial solutions are copied from agent to agent, while our appropriation rules specify how agents increment these solutions with {\em Sudoku} solving techniques such as those studied in~\cite{davis:mathsudoku}.
 
 \subsection{Aggregation Rules}
 
@@ -81,7 +81,7 @@ We inserted this behaviour into our model by firstly generating a random orderin
 
 \subsection{Appropriation Rules}
 
-In {\em Sudoku} strategy literature, as in chess, we find multiple techniques with iconic names. Some popular examples are the {\em naked singles} rule, the {\em naked twins} rule and the {\em swordfish} rule, studied in ~\cite{davis:mathsudoku}. These strategies intend to, given a {\em Sudoku} puzzle in a partial state of completion, generate movements to mark blank cells of the puzzle, as "{\em mark cell 1 of column 3 with value 5}". We reproduced a variety of these strategies, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of movements.
+In {\em Sudoku} strategy literature, as in chess, we find multiple techniques with iconic names. Some popular examples are the {\em naked singles} rule, the {\em hidden singles} rule and the {\em naked twins} rule, studied in ~\cite{davis:mathsudoku}. These strategies intend to, given a {\em Sudoku} puzzle in a partial state of completion, generate movements to mark blank cells of the puzzle, as {\em "mark cell 1 of column 3 with value 5"}. We reproduced a variety of these strategies, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of movements.
 
 \subsubsection{Only Choice}
 
