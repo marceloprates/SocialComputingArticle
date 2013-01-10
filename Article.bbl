@@ -1,9 +1,28 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{Ahn and Dabbish}{2008}]{vonahm:gwap}
+Luis~Von Ahn and Laura Dabbish.
+\newblock Designing games with a purpose.
+\newblock In {\em Communications of the ACM}, volume~51, pages 58--67, August
+  2008.
+
+\bibitem[\protect\citeauthoryear{Cooper}{2011}]{cooper:foldit}
+Seth Cooper.
+\newblock Algorithm discovery by protein folding game players.
+\newblock June 2011.
+
 \bibitem[\protect\citeauthoryear{Davis}{2007}]{davis:mathsudoku}
 Tom Davis.
 \newblock The mathematics of sudoku.
 \newblock November 2007.
+
+\bibitem[\protect\citeauthoryear{Efferson \bgroup \em et al.\egroup
+  }{2008}]{cefferson:conformists}
+C.~Efferson, R.~Lalive, P.J. Richerson, R.~McElreath, and M.~Lubell.
+\newblock Conformists and mavericks: the empirics of frequency-dependent
+  cultural transmission.
+\newblock In {\em Evolution and Human Behaviour}, volume~29, pages 56--64,
+  2008.
 
 \bibitem[\protect\citeauthoryear{Farenzena \bgroup \em et al.\egroup
   }{2011}]{farenzena:collabem}
@@ -13,6 +32,12 @@ Daniel Farenzena, Ricardo Araujo, and Luis Lamb.
 \newblock In {\em 2011 IEEE International Conference on Privacy, Security,
   Risk, and Trust, and IEEE International Conference on Social Computing},
   2011.
+
+\bibitem[\protect\citeauthoryear{Kearns}{2012}]{kearns:experim}
+Michael Kearns.
+\newblock Experiments in social computation.
+\newblock In {\em Communications of the ACM}, volume~55, pages 56--67, June
+  2012.
 
 \bibitem[\protect\citeauthoryear{Lamb and Araujo}{2008}]{lamb:memenet}
 Luis Lamb and Ricardo Araujo.

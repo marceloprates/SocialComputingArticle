@@ -1,33 +1,18 @@
-%%%% ijcai11.tex
+%\documentclass{article}
+%\usepackage{ijcai13}
+%\usepackage{times}
+%\usepackage{latexsym} 
 
-\typeout{IJCAI-13 Instructions for Authors}
-
-% These are the instructions for authors for IJCAI-13.
-% They are the same as the ones for IJCAI-11 with superficical wording
-%   changes only.
-
-\documentclass{article}
-% The file ijcai13.sty is the style file for IJCAI-13 (same as ijcai07.sty).
-\usepackage{ijcai13}
-
-% Use the postscript times font!
+\documentclass[letterpaper]{article}
+\usepackage{aaai}
 \usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\frenchspacing
 
-\usepackage{latexsym} 
-
+\usepackage{graphicx}
 
 \title{Social Computing Article\thanks{This title is temporary}}
-\author{Tabajara, Lucas \\
-Institute of Informatics \\
-Federal University of Rio Grande do Sul\\
-Brazil \\
-lmtabajara@inf.ufrgs.br
-\and
-Prates, Marcelo \\
-Institute of Informatics \\
-Federal University of Rio Grande do Sul\\
-Brazil \\
-morprates@inf.ufrgs.br}
 
 \begin{document}
 
@@ -90,7 +75,7 @@ This rule employs the intuitive strategy of copying from the neighbour with the 
 
 We know that users tend to copy the first (from left to right) solutions on the graphic interface~\cite{farenzena:collabem}. The authors have provided us with a mathematical model of this behaviour, stated as $\langle X(k)\rangle = (1-p)^{k-1}p$, where the parameter $p$ is fixed as $p = 0.5479$ and $\langle X(k)\rangle$ denotes the probability of an agent copying the $k_{th}$ neighbour solution.
 
-We inserted this behaviour into our model by firstly generating a random ordering of neighbours for each agent in order to compose a simulated graphic interface. As a result, each agent visualizes some neighbours before or after others. Secondly, we translated the above mathematical model into an aggregation rule in which the solution copied by an agent is the $k_{th}$ with probability $X(k)$.
+We inserted this behaviour into our model by firstly generating a random ordering of neighbours for each agent in order to compose a simulated graphic interface. As a result, each agent visualizes some neighbours before or after others. Secondly, we translated the above mathematical model into an aggregation rule in which the solution copied by an agent is the $k_{th}$ with probability $\langle X(k)\rangle$.
 
 \subsection{Appropriation Rules}
 
@@ -106,13 +91,50 @@ This rule marks a {\em Sudoku} cell with value $v$ only if $v$ is the single pos
 
 \subsubsection{Hidden Singles}
 
-This rule is similar to the {\em naked singles} rule. It is able to mark cells with more than one candidate value by looking for cells that are the only cells in their row, column or $3 \times 3$ block that can hold a particular value.
+This rule is similar to the {\em naked singles} rule. It is able to mark cells with more than one candidate value by looking for cells that are the only ones in their row, column or $3 \times 3$ block that can hold a particular value.
 
 \subsubsection{Two out of Three}
 
-This rule applies to groups of three contiguous $3 \times 3$ blocks. It aims to find a value $v$ such that $v$ is present in two of the three $3 \times 3$ blocks encompassed by the group, but missing on the third. It proceeds by enumerating all the candidate cells - namely the empty cells - on this block, and then, by eliminating from this set all the cells that are encompassed by the rows or columns in which $v$ is placed on the other two blocks. If the resulting set has cardinality $1$, the rule has successfully found one cell to mark.
+This rule applies to groups of three contiguous $3 \times 3$ blocks. It aims to find a value $v$ such that $v$ is present in two of the three $3 \times 3$ blocks encompassed by the group, but missing on the third. It proceeds by enumerating all the candidate cells - namely the empty cells - on this block, and then, by eliminating from this set all the cells that are encompassed by the rows or columns in which $v$ is placed on the other two blocks. If the resulting set has cardinality $1$, the rule has successfully found a cell to mark.
 
 \subsubsection{Naked Twins}
+
+\subsection{Copying Solutions}
+
+In a study conducted by~\cite{farenzena:collabem}, subjects were invited to solve {\em Sudoku} puzzles and share them with other subjects with whom they were connected through a network topology. At any time, a player could copy solutions from one of his or her neighbours. The authors' analysis has shown that there is a different copy frequency associated with each topology. For instance, the scale free topology with $\gamma = 1.65$ resulted in a copy frequency of $87 \%$, while the fully connected topology resulted in a copy frequency of $42 \%$.
+
+We incorporated this copying frequency into our modelling, recreating the scenario of the experiments conducted by~\cite{farenzena:collabem} by setting this parameter accordingly to the topologies we used.
+
+\subsection{Conformist Behaviour}
+
+We introduce in our modelling the {\em conformist} behaviour proposed by~\cite{cefferson:conformists} and further studied by~\cite{farenzena:collabem}, which states that agents tend to copy a particular solution with probability $1$ when surrounded by neighbours that share this solution. 
+
+Our approach was to establish a {\em treshold} determining a minimum necessary quantity $N$ of neighbours sharing a particular solution. In our modelling, all agents with $N$ or more neighbours having a solution $s$ in common are programmed to copy solution $s$ from them.
+
+\subsection{Guessing and Backtracking}
+
+We have consistent evidence that trial-and-error is a part of the {\em Sudoku} solving experience. The need for trial-and-error in {\em Sudoku} puzzles is not a falsifiable conclusion, but a mathematical fact~\cite{davis:mathsudoku}. Some puzzles are only solvable by the means of a backtracking procedure (see Figure 1).
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.30]{trial_and_error_sudoku}
+\caption{A {\em Sudoku} puzzle solvable only by trial-and-error}
+\label{fig:trial_and_error_sudoku}
+\end{figure}
+
+In our modelling, we associate each agent with a numerical parameter determining the probability of this agent to guess when incapable of applying a typical {\em Sudoku} solving strategy.
+
+Automatic {\em Sudoku} solvers employing a backtracking algorithm are easily programmed and very time-efficient. On the other hand, the space complexity of these algorithms is a barrier to most human solvers, who need to write down tons of observations in order to employ a backtracking strategy. With this in mind, we propose in our modelling two different kinds of backtracking, intended to be more similar to the way human beings employ error correction in {\em Sudoku} solving in a collaborative environment such as the one analysed in~\cite{farenzena:collabem}.
+
+\begin{itemize}
+
+\item
+Local Backtracking: When faced with one or more conflicts in its own solution, an agent simply erases the conflicting cells.
+\item
+Social Backtracking: When faced with one or more conflicts in its own solution, an agent copies a solution from one of its neighbours. In our modelling, this is done by raising the copy rate of this particular agent to $1$.
+
+\end{itemize}
+
 
 \section{Results}
 
@@ -121,6 +143,10 @@ Results
 \section{Conclusions}
 
 Conclusions
+
+\section{Acknowledgements}
+
+Research partly supported by CPNPq and CAPES, Brazil.
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
 \bibliographystyle{named}
