@@ -8,6 +8,7 @@
 \usepackage{times}
 \usepackage{helvet}
 \usepackage{courier}
+\usepackage{algorithm2e}
 \frenchspacing
 
 \usepackage{graphicx}
@@ -55,31 +56,78 @@ We have built a multi-agent system that simulates the experiments of \cite{faren
 
 We developed a system in which the environment of the {\em Sudoku} problem-solving social network presented in~\cite{farenzena:collabem} could be modelled through autonomous agent networks and analysed through a series of experiments. The optimization technique of {\em Memetic Networks}~\cite{lamb:memenet} was employed on the modelling, providing a basis for the dynamics of the agent network.
 
-\section{Sudoku Solving Memetic Network}
- 
-A {\em Memetic Network Algorithm} is composed of an ordered set of $N$ agents, each encoding a complete solution to the optimization problem, and a binary $N \times N$ matrix representing possible connections between agents. Additionally, a {\em Memetic Network Algorithm} is composed of a set of rules specifying how connections between agents are formed and erased and how interactions between these agents take place. These rules are grouped under the categories of {\em Connection Rules}, specifying how agents will connect and disconnect from each other; {\em Aggregation Rules}, specifying the dynamics of the information flow through connections; and {\em Appropriation Rules}, specifying how agents are supposed to add local changes to the information received through their connections~\cite{lamb:memenet}.
+\section{A Novel Method for Agent-based Social Problem Solving}
 
-Our solution adapts the {\em Memetic Newtork} technique - originally intended for use in optimization problems - to the context of constraint satisfaction problems. In this specific case ({\em Sudoku} solving), we treat problems with one unique solution. To deal with this scenario, we propose a {\em Memetic Network} variation in which each agent encodes not a complete, but a partial solution to the problem.
+A number of multi-agent methodologies that employ information flow through agents have been studied before. For instance, the {\em Memetic Networks} model proposed by~\cite{lamb:memenet} draws inspiration from the phenomenon of {\em Cultural Evolution} discussed by Dawkins in~\cite{dawkins:selfishgene} and has a network of agents sharing, copying and incrementing units of information in a similar way that nature, according to Dawkins, deals with {\em Memes}~\cite{dawkins:selfishgene}. Nevertheless, some aspects of social behaviour of great significance to social computing cannot be properly analysed through this methodologies. One example is the conformist behaviour studied in~\cite{cefferson:conformists} and~\cite{farenzena:collabem}. The proper study of these aspects demands a novel method for agent-based collaborative problem solving.
 
-Our solution employs a fixed topology for the agent network and models cooperation through a set of {\em aggregation rules} and reasoning through a set of {\em appropriation rules}. Our aggregation rules specify how {\em Sudoku} partial solutions are copied from agent to agent, while our appropriation rules specify how agents increment these solutions with {\em Sudoku} solving techniques such as those studied in~\cite{davis:mathsudoku}.
+We propose a method for solving computational problems by the means of a network of agents with social behaviour. Our algorithm is composed of an ordered set of $N$ agents, each encoding a partial solution to the problem, and a binary $N \times N$ matrix representing possible connections between agents. Additionally, our algorithm is composed of two stages, namely the {\em Social Stage} and the {\em Cognitive Stage}. 
 
-\subsection{Aggregation Rules}
+\begin{itemize}
+\item
+Social Stage: In the {\em Social Stage}, messages are passed from agent to agent through the network connections. Agents are thus presented with a multiplicity of messages. There is a particular probability associated with the agents choosing to copy one of these solutions in contrast to keeping their current solutions. We call this probability the {\em Copy Rate}. When an agent chooses to copy, he or she is then supposed to select for copying only one of his or her received messages. This is done by the means of a particular message-selecting metric.
 
-The experiments conducted by~\cite{farenzena:collabem} point out a series of observations about the dynamics of cooperation in problem solving with human beings. For instance, the authors analysis has shown that users tend to copy not the most complete solutions, but, instead, the first solutions on the graphic interface. Additionally, we know from this same paper that users rarely copy solutions from more than 6 neighbours. In order to analyse and compare this behaviours, we developed a collection of aggregation rules, each modelling a copying strategy.
+\item
+Cognitive Stage: In the {\em Cognitive Stage}, agents are supposed to add local changes to the messages copied in the previous stage. This is done by the means of a heuristic or an exact method.
+\end{itemize}
 
-\subsubsection{Pick Most Filled}
+\begin{algorithm}
+ \SetAlgoLined
+ Initialize N agents, each encoding a partial solution to the problem\;
+ \While{termination condition not met}
+ {
+ 	\For{i = 1 to N}
+ 	{
+ 		\For{j = 1 to N}
+ 		{
+ 			\If{j is connected to i}
+ 			{
+ 				A = $i_{th}$ agent\;
+ 				A.messages.add(j.solution)\;
+ 			}
+ 		}
+ 	}
+ 	\For{i = 1 to N} 
+ 	{
+ 		\CommentSty{ //Social Stage }\;
+ 		A = $i_{th}$ agent\;
+ 		selectedMessage = select(A.messages)\;
+ 		
+ 		\If{random(0,1) $<$ copyRate}
+ 		{
+ 			A.solution = selectedMessage\;
+ 		}
+ 	}
+ 	\For{i = 1 to N}
+ 	{
+ 		\CommentSty{ //Cognitive Stage }\;
+ 		A = $i_{th}$ agent\;
+ 		A.solution = addLocalChanges(A.solution)\;
+ 	}
+ }
+ \caption{No name yet}
+\end{algorithm}
 
-This rule employs the intuitive strategy of copying from the neighbour with the most filled {\em Sudoku} board, namely the most complete solution.
+\section{Performance Tests}
 
-\subsubsection{Pick Among First}
+In order to validate the algorithm as a social problem solving technique, we have modelled the collaborative {\em Sudoku} solving environment studied in~\cite{farenzena:collabem} through it and tested it over a set of {\em Sudoku} instances.
 
-We know that users tend to copy the first (from left to right) solutions on the graphic interface~\cite{farenzena:collabem}. The authors have provided us with a mathematical model of this behaviour, stated as $\langle X(k)\rangle = (1-p)^{k-1}p$, where the parameter $p$ is fixed as $p = 0.5479$ and $\langle X(k)\rangle$ denotes the probability of an agent copying the $k_{th}$ neighbour solution.
+\subsection{Social Stage}
 
-We inserted this behaviour into our model by firstly generating a random ordering of neighbours for each agent in order to compose a simulated graphic interface. As a result, each agent visualizes some neighbours before or after others. Secondly, we translated the above mathematical model into an aggregation rule in which the solution copied by an agent is the $k_{th}$ with probability $\langle X(k)\rangle$.
+The experiments conducted by~\cite{farenzena:collabem} point out a series of observations about the dynamics of cooperation in problem solving with human beings. For instance, the authors analysis has shown that human subjects are more likely to engage in the behaviour of copying the most readily available solutions on the graphic interface than in that of copying the most complete solutions. In order to analyse and compare this two behaviours, he have modelled each one of them as a message-selecting metric for the {\em Social Stage}.
 
-\subsection{Appropriation Rules}
+\subsubsection{{\em Pick Most Filled} metric}
 
-In {\em Sudoku} strategy literature, as in chess, we find multiple techniques with iconic names. Some popular examples are the {\em naked singles} rule, the {\em hidden singles} rule and the {\em naked twins} rule, studied in ~\cite{davis:mathsudoku}. These strategies intend to, given a {\em Sudoku} puzzle in a partial state of completion, generate movements to mark blank cells of the puzzle, as {\em "mark cell 1 of column 3 with value 5"}. We reproduced a variety of these strategies, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of movements.
+This metric employs the intuitive strategy of selecting the most complete message for copying. In the specific case of {\em Sudoku} solving, this metric selects the most filled {\em Sudoku} partial solution. Put in other words, it selects the {\em Sudoku} partial solution with the lesser number of blank cells.
+
+\subsubsection{{\em Pick Among First} metric}
+
+We know that, in some settings of collaborative problem-solving, human subjects are likely to copy the first (from left to right) solutions on the graphic interface~\cite{farenzena:collabem}. The authors have provided us with a mathematical model of this behaviour, stated as $\langle X(k)\rangle = (1-p)^{k-1}p$, where the parameter $p$ is fixed as $p = 0.5479$ and $\langle X(k)\rangle$ denotes the probability of an agent copying the $k_{th}$ neighbour solution.
+
+We inserted this behaviour into our model by firstly generating a random ordering of neighbours for each agent in order to compose a simulated graphic interface. As a result, each agent visualizes some neighbours before or after others. Secondly, we translated the above mathematical model into an message-selecting metric in which the solution selected by an agent is the $k_{th}$ with probability $\langle X(k)\rangle$.
+
+\subsection{Cognitive Stage}
+
+{\em Sudoku} solving techniques are abundant in {\em Sudoku} strategy literature.~\cite{davis:mathsudoku} discusses a collection of these techniques, of which the {\em Naked Singles} rule, the {\em Hidden Singles} rule and the {\em Naked Twins} rule are some examples. These techniques intend to, given a partial {\em Sudoku} solution, generate a set of {\em movements} with can be used to mark cells of this {\em Sudoku} puzzle. We implemented $4$ of these rules, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of {\em movements}. These functions can be used in the {\em Cognitive Stage} to add local changes to the {\em Sudoku} message received in the {\em Social Stage}.
 
 \subsubsection{Only Choice}
 
@@ -107,7 +155,7 @@ We incorporated this copying frequency into our modelling, recreating the scenar
 
 \subsection{Conformist Behaviour}
 
-We introduce in our modelling the {\em conformist} behaviour proposed by~\cite{cefferson:conformists} and further studied by~\cite{farenzena:collabem}, which states that agents tend to copy a particular solution with probability $1$ when surrounded by neighbours that share this solution. 
+We introduce in our modelling the {\em conformist} behaviour proposed by~\cite{cefferson:conformists} and further studied by~\cite{farenzena:collabem}, which states that agents are likely to copy a particular solution with probability $1$ when surrounded by neighbours that share this solution. 
 
 Our approach was to establish a {\em treshold} determining a minimum necessary quantity $N$ of neighbours sharing a particular solution. In our modelling, all agents with $N$ or more neighbours having a solution $s$ in common are programmed to copy solution $s$ from them.
 
@@ -146,7 +194,7 @@ Conclusions
 
 \section{Acknowledgements}
 
-Research partly supported by CPNPq and CAPES, Brazil.
+We are grateful to Diego Noble and Cristiano *{\em qual sobrenome?}* for their advice, contribution and proofreading. Research partly supported by CPNPq and CAPES, Brazil.
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
 \bibliographystyle{named}
