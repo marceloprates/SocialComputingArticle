@@ -9,7 +9,8 @@ Luis~Von Ahn and Laura Dabbish.
 \bibitem[\protect\citeauthoryear{Cooper}{2011}]{cooper:foldit}
 Seth Cooper.
 \newblock Algorithm discovery by protein folding game players.
-\newblock June 2011.
+\newblock In {\em National Academy of Sciences}, volume 108, pages 1--5, June
+  2011.
 
 \bibitem[\protect\citeauthoryear{Davis}{2007}]{davis:mathsudoku}
 Tom Davis.
@@ -29,9 +30,9 @@ C.~Efferson, R.~Lalive, P.J. Richerson, R.~McElreath, and M.~Lubell.
 Daniel Farenzena, Ricardo Araujo, and Luis Lamb.
 \newblock Collaboration emergence in social networks with informational natural
   selection.
-\newblock In {\em 2011 IEEE International Conference on Privacy, Security,
-  Risk, and Trust, and IEEE International Conference on Social Computing},
-  2011.
+\newblock In {\em 2011 IEEE Third Intl Conference on Privacy Security Risk and
+  Trust and 2011 IEEE Third Intl Conference on Social Computing}, pages
+  555--559, 2011.
 
 \bibitem[\protect\citeauthoryear{Kearns}{2012}]{kearns:experim}
 Michael Kearns.
@@ -48,6 +49,7 @@ Luis Lamb and Ricardo Araujo.
 \bibitem[\protect\citeauthoryear{Mason and Watts}{2011}]{mason:collablearnet}
 Winter Mason and Duncan~J. Watts.
 \newblock Collaborative learning in networks.
-\newblock November 2011.
+\newblock In {\em Proceedings of the National Academy of Sciences}, volume
+  2011, pages 764--769, November 2011.
 
 \end{thebibliography}
