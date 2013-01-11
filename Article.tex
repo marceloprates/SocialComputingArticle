@@ -54,7 +54,7 @@ We have built a multi-agent system that simulates the experiments of \cite{faren
 
 \section{System Overview}
 
-We developed a system in which the environment of the {\em Sudoku} problem-solving social network presented in~\cite{farenzena:collabem} could be modelled through autonomous agent networks and analysed through a series of experiments. The optimization technique of {\em Memetic Networks}~\cite{lamb:memenet} was employed on the modelling, providing a basis for the dynamics of the agent network.
+We developed a system in which the environment of the {\em Sudoku} problem-solving social network presented in~\cite{farenzena:collabem} could be modelled through autonomous agent networks and analysed through a series of experiments. We conceived a novel method for agent-based social problem solving witch draws inspiration from the optimization technique of {\em Memetic Networks}~\cite{lamb:memenet}.
 
 \section{A Novel Method for Agent-based Social Problem Solving}
 
@@ -64,7 +64,7 @@ We propose a method for solving computational problems by the means of a network
 
 \begin{itemize}
 \item
-Social Stage: In the {\em Social Stage}, messages are passed from agent to agent through the network connections. Agents are thus presented with a multiplicity of messages. There is a particular probability associated with the agents choosing to copy one of these solutions in contrast to keeping their current solutions. We call this probability the {\em Copy Rate}. When an agent chooses to copy, he or she is then supposed to select for copying only one of his or her received messages. This is done by the means of a particular message-selecting metric.
+Social Stage: In the {\em Social Stage}, messages are passed from agent to agent through the network connections. Agents are thus presented with a multiplicity of messages. There is a particular probability associated with the behaviour of agents choosing to copy one of these solutions in contrast to keeping their current solutions. We call this probability the {\em Copy Rate}. When an agent chooses to copy, he or she is then supposed to select for copying only one of his or her received messages. This is done by the means of a particular message-selecting metric.
 
 \item
 Cognitive Stage: In the {\em Cognitive Stage}, agents are supposed to add local changes to the messages copied in the previous stage. This is done by the means of a heuristic or an exact method.
@@ -127,7 +127,7 @@ We inserted this behaviour into our model by firstly generating a random orderin
 
 \subsection{Cognitive Stage}
 
-{\em Sudoku} solving techniques are abundant in {\em Sudoku} strategy literature.~\cite{davis:mathsudoku} discusses a collection of these techniques, of which the {\em Naked Singles} rule, the {\em Hidden Singles} rule and the {\em Naked Twins} rule are some examples. These techniques intend to, given a partial {\em Sudoku} solution, generate a set of {\em movements} with can be used to mark cells of this {\em Sudoku} puzzle. We implemented $4$ of these rules, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of {\em movements}. These functions can be used in the {\em Cognitive Stage} to add local changes to the {\em Sudoku} message received in the {\em Social Stage}.
+{\em Sudoku} solving techniques are abundant in {\em Sudoku} strategy literature.Davis ~\cite{davis:mathsudoku} discusses a collection of these techniques, of which the {\em Naked Singles} rule, the {\em Hidden Singles} rule and the {\em Naked Twins} rule are some examples. These techniques intend to, given a partial {\em Sudoku} solution, generate a set of {\em movements} which can be used to mark cells of this {\em Sudoku} puzzle. We implemented $4$ of these rules, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of {\em movements}. These functions can be used in the {\em Cognitive Stage} to add local changes to the {\em Sudoku} message received in the {\em Social Stage}.
 
 \subsubsection{Only Choice}
 
