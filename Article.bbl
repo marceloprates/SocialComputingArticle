@@ -6,6 +6,12 @@ Luis~Von Ahn and Laura Dabbish.
 \newblock In {\em Communications of the ACM}, volume~51, pages 58--67, August
   2008.
 
+\bibitem[\protect\citeauthoryear{Araujo and Lamb}{2008}]{araujo:memenet}
+Ricardo Araujo and Luis Lamb.
+\newblock Memetic networks: analyzing the effects of network properties in
+  multi-agent performance.
+\newblock In {\em AAAI'08}, pages 3--8, 2008.
+
 \bibitem[\protect\citeauthoryear{Cooper}{2011}]{cooper:foldit}
 Seth Cooper.
 \newblock Algorithm discovery by protein folding game players.
@@ -16,6 +22,11 @@ Seth Cooper.
 Tom Davis.
 \newblock The mathematics of sudoku.
 \newblock November 2007.
+
+\bibitem[\protect\citeauthoryear{Dawkins}{1976}]{dawkins:selfishgene}
+Richard Dawkins.
+\newblock {\em The Selfish Gene}, volume~32.
+\newblock Oxford University Press, 1976.
 
 \bibitem[\protect\citeauthoryear{Efferson \bgroup \em et al.\egroup
   }{2008}]{cefferson:conformists}
@@ -39,12 +50,6 @@ Michael Kearns.
 \newblock Experiments in social computation.
 \newblock In {\em Communications of the ACM}, volume~55, pages 56--67, June
   2012.
-
-\bibitem[\protect\citeauthoryear{Lamb and Araujo}{2008}]{lamb:memenet}
-Luis Lamb and Ricardo Araujo.
-\newblock Memetic networks: analyzing the effects of network properties in
-  multi-agent performance.
-\newblock In {\em AAAI'08}, pages 3--8, 2008.
 
 \bibitem[\protect\citeauthoryear{Mason and Watts}{2011}]{mason:collablearnet}
 Winter Mason and Duncan~J. Watts.

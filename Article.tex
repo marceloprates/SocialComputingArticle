@@ -50,15 +50,15 @@ The experiments conducted by \cite{farenzena:collabem} had human beings trying t
 
 \section{Contribution}
 
-We have built a multi-agent system that simulates the experiments of \cite{farenzena:collabem}, using the model of human behaviour proposed by them. We adapted that behaviour into a set of rules which we modeled in the \emph{Memetic Network} model proposed by \cite{lamb:memenet}. For simplicity, we limited our experiments to the Sudoku problem. Our goal is verifying whether the strategies employed by humans are competitive with other heuristics. After identifying the points in which those are lacking, we will then propose methods to increase the efficiency of human problem-solving networks.
+We have built a multi-agent system that simulates the experiments of \cite{farenzena:collabem}, using the model of human behaviour proposed by them. We adapted that behaviour into a set of rules which we modeled in the \emph{Memetic Network} model proposed by \cite{araujo:memenet}. For simplicity, we limited our experiments to the Sudoku problem. Our goal is verifying whether the strategies employed by humans are competitive with other heuristics. After identifying the points in which those are lacking, we will then propose methods to increase the efficiency of human problem-solving networks.
 
 \section{System Overview}
 
-We developed a system in which the environment of the {\em Sudoku} problem-solving social network presented in~\cite{farenzena:collabem} could be modelled through autonomous agent networks and analysed through a series of experiments. We conceived a novel method for agent-based social problem solving witch draws inspiration from the optimization technique of {\em Memetic Networks}~\cite{lamb:memenet}.
+We developed a system in which the environment of the {\em Sudoku} problem-solving social network presented in~\cite{farenzena:collabem} could be modelled through autonomous agent networks and analysed through a series of experiments. We conceived a novel method for agent-based social problem solving witch draws inspiration from the optimization technique of {\em Memetic Networks}~\cite{araujo:memenet}.
 
 \section{A Novel Method for Agent-based Social Problem Solving}
 
-A number of multi-agent methodologies that employ information flow through agents have been studied before. For instance, the {\em Memetic Networks} model proposed by~\cite{lamb:memenet} draws inspiration from the phenomenon of {\em Cultural Evolution} discussed by Dawkins in~\cite{dawkins:selfishgene} and has a network of agents sharing, copying and incrementing units of information in a similar way that nature, according to Dawkins, deals with {\em Memes}~\cite{dawkins:selfishgene}. Nevertheless, some aspects of social behaviour of great significance to social computing cannot be properly analysed through this methodologies. One example is the conformist behaviour studied in~\cite{cefferson:conformists} and~\cite{farenzena:collabem}. The proper study of these aspects demands a novel method for agent-based collaborative problem solving.
+A number of multi-agent methodologies that employ information flow through agents have been studied before. For instance, the {\em Memetic Networks} model proposed by~\cite{araujo:memenet} draws inspiration from the phenomenon of {\em Cultural Evolution} discussed by Dawkins in~\cite{dawkins:selfishgene} and has a network of agents sharing, copying and incrementing units of information in a similar way that nature, according to Dawkins, deals with {\em Memes}~\cite{dawkins:selfishgene}. Nevertheless, some aspects of social behaviour of great significance to social computing cannot be properly analysed through this methodologies. One example is the conformist behaviour studied in~\cite{cefferson:conformists} and~\cite{farenzena:collabem}. The proper study of these aspects demands a novel method for agent-based collaborative problem solving.
 
 We propose a method for solving computational problems by the means of a network of agents with social behaviour. Our algorithm is composed of an ordered set of $N$ agents, each encoding a partial solution to the problem, and a binary $N \times N$ matrix representing possible connections between agents. Additionally, our algorithm is composed of two stages, namely the {\em Social Stage} and the {\em Cognitive Stage}. 
 
@@ -127,9 +127,11 @@ We inserted this behaviour into our model by firstly generating a random orderin
 
 \subsection{Cognitive Stage}
 
-{\em Sudoku} solving techniques are abundant in {\em Sudoku} strategy literature.Davis ~\cite{davis:mathsudoku} discusses a collection of these techniques, of which the {\em Naked Singles} rule, the {\em Hidden Singles} rule and the {\em Naked Twins} rule are some examples. These techniques intend to, given a partial {\em Sudoku} solution, generate a set of {\em movements} which can be used to mark cells of this {\em Sudoku} puzzle. We implemented $4$ of these rules, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of {\em movements}. These functions can be used in the {\em Cognitive Stage} to add local changes to the {\em Sudoku} message received in the {\em Social Stage}.
+{\em Sudoku} solving techniques are abundant in {\em Sudoku} strategy literature. Davis ~\cite{davis:mathsudoku} discusses a collection of these techniques, of which the {\em Naked Singles} rule, the {\em Hidden Singles} rule and the {\em Naked Twins} rule are some examples. These techniques intend to, given a partial {\em Sudoku} solution, generate a set of {\em movements} which can be used to mark cells of this {\em Sudoku} puzzle. We implemented $5$ of these rules, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of {\em movements}. These functions can be used in the {\em Cognitive Stage} to add local changes to the {\em Sudoku} message received in the {\em Social Stage}.
 
-\subsubsection{Only Choice}
+The rules implemented were the {\em Unique Missing Candidate} rule, the {\em Naked Singles} rule, the {\em Hidden Singles} rule, the {\em Two out of Three} rule and the {\em Naked Twins} rule, all of which (with the exception of the {\em Two out of Three} rule) are discussed in~\cite{davis:mathsudoku}. In our modelling, each agent knows a particular quantity of rules, this quantity determining the agent's {\em level}. Our tests were all conducted with a heterogeneous population of agents of different {\em levels}. We detail below each one of the implemented rules.
+
+\subsubsection{Unique Missing Candidate}
 
 This technique marks a {\em Sudoku} cell with a value only if this cell is the last blank cell on its row, column or $3 \times 3$ block.
 
@@ -184,17 +186,41 @@ Social Backtracking: When faced with one or more conflicts in its own solution, 
 \end{itemize}
 
 
-\section{Results}
+\section{Results and Analysis}
 
-Results
+We tested the above modelling using an heterogeneous, uniform agent distribution in which every agent {\em level} ($0$ to $5$) had an equal representation in the population. We performed tests with varying values for the parameters of {\em copy rate}, {\em guess rate}, {\em message selecting metric} and {\em network topology}.
+
+\subsection{Copying and Guessing are beneficial to the Algorithm's Performance}
+
+~\cite{farenzena:collabem} have stated that, in their settings, {\em "cooperation works because agents can copy each other"}. Our experiments indicate that, indeed, in some of the topologies tested, the {\em copy rate} has a decisive role in enhancing the algorithm's performance (see Figure 2 and Figure 3). The graphs in Figure 2 and Figure 3 - in which the vertical axis represents the number of iterations needed for the agents to solve the problem - both show a peak in ({\em copy rate}: 7, {\em guess rate}: 0) and a valley in ({\em copy rate}: 87, {\em guess rate}: 100), indicating that the greater the {\em copy} and {\em guess} rates are, the fewer iterations are needed for the agents to solve the problem. We understand this is due to the fact that some agents of low levels are incapable of solving some instances of the {\em Sudoku} problem, don't knowing the {\em Sudoku} solving rules needed to mark its cells. These agents have no hope solving the problem without some guessing mechanism, and take advantage of high {\em copy rates}, which can be used to correct wrong guesses through copying better agent's solutions.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.60]{copy_guess_free_most}
+\caption{Effects of copy rate and guess rate on the algorithm's performance (scale-free topology with 'pick most filled' selection metric)
+}
+\label{fig:copy_guess_free_most}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.60]{copy_guess_free_prob}
+\caption{Effects of copy rate and guess rate on the algorithm's performance (scale-free topology with 'pick among first' selection metric)
+}
+\label{fig:copy_guess_free_most}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.60]{copy_guess_free_prob_num_solution_reached}
+\caption{Effects of copy rate and guess rate on the algorithm's convergence (scale-free topology with 'pick among first' selection metric)
+}
+\label{fig:copy_guess_free_prob_num_solution_reached}
+\end{figure}
 
 \section{Conclusions}
 
 Conclusions
-
-\section{Acknowledgements}
-
-We are grateful to Diego Noble and Cristiano *{\em qual sobrenome?}* for their advice, contribution and proofreading. Research partly supported by CPNPq and CAPES, Brazil.
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
 \bibliographystyle{named}
