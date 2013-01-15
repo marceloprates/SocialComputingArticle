@@ -131,23 +131,9 @@ We inserted this behaviour into our model by firstly generating a random orderin
 
 The rules implemented were the {\em Unique Missing Candidate} rule, the {\em Naked Singles} rule, the {\em Hidden Singles} rule, the {\em Two out of Three} rule and the {\em Naked Twins} rule, all of which (with the exception of the {\em Two out of Three} rule) are discussed in~\cite{davis:mathsudoku}. In our modelling, each agent knows a particular quantity of rules, this quantity determining the agent's {\em level}. Our tests were all conducted with a heterogeneous population of agents of different {\em levels}. We detail below each one of the implemented rules.
 
-\subsubsection{Unique Missing Candidate}
-
-This technique marks a {\em Sudoku} cell with a value only if this cell is the last blank cell on its row, column or $3 \times 3$ block.
-
-\subsubsection{Naked Singles}
-
-This rule marks a {\em Sudoku} cell with value $v$ only if $v$ is the single possible value to mark that cell. The other values must have been eliminated through a process of verifying that they are all present in the span encompassing the cell's row, column and $3 \times 3$ block.
-
-\subsubsection{Hidden Singles}
-
-This rule is similar to the {\em naked singles} rule. It is able to mark cells with more than one candidate value by looking for cells that are the only ones in their row, column or $3 \times 3$ block that can hold a particular value.
-
-\subsubsection{Two out of Three}
+\subsubsection{Two out of Three Rule}
 
 This rule applies to groups of three contiguous $3 \times 3$ blocks. It aims to find a value $v$ such that $v$ is present in two of the three $3 \times 3$ blocks encompassed by the group, but missing on the third. It proceeds by enumerating all the candidate cells - namely the empty cells - on this block, and then, by eliminating from this set all the cells that are encompassed by the rows or columns in which $v$ is placed on the other two blocks. If the resulting set has cardinality $1$, the rule has successfully found a cell to mark.
-
-\subsubsection{Naked Twins}
 
 \subsection{Copying Solutions}
 
