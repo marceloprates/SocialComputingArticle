@@ -206,7 +206,22 @@ Farenzena ~\cite{farenzena:collabem} have stated that, in their settings, {\em "
 
 \subsection{Evaluating the Neighbours' Solutions is Beneficial}
 
-Of the three metrics employed by us in the \emph{Social Stage}, only one had the agent evaluate the content of the solutions proposed by their neighbours. The other chose who to copy based on position, simulating observed human behaviour, and the remaining one chose a neighbour randomly. Our experiments have shown that evaluating the proposed solutions indeed bring significantly better results, despite the fact that humans seemingly avoid that strategy. In all topologies, choosing the solution with the largest number of filled cells not only allows agents to solve the instance earlier, but also causes the network to converge faster to the correct solution. That is, once one individual has found the correct solution, that solution spreads faster through the network if the other agents are evaluating the solutions that reach them.
+Of the three metrics employed by us in the \emph{Social Stage}, only one had the agent evaluate the content of the solutions proposed by their neighbours. Another chose who to copy based on position, simulating observed human behaviour, and the remaining one chose a neighbour randomly.
+
+As can be seen in Figure~\ref{fig:progression}, our experiments have shown that evaluating the proposed solutions indeed bring significantly better results, despite the fact that humans seemingly avoid that strategy. In all topologies, choosing the solution with the largest number of filled cells not only allows agents to solve the instance earlier, but also causes the network to converge faster to the correct solution. That is, once one individual has found the correct solution, that solution spreads faster through the network if the other agents are evaluating the solutions that reach them.
+
+The strategy based on the behaviour observed in humans fared roughly the same as choosing a random neighbour to copy, and both underperformed in comparison to evaluating the solutions according to number of filled cells. This confirms that choosing solutions arbitrarily without taking their content into consideration is prejudicial to the process of problem-solving.
+
+Even so, that behaviour was observed in human networks. \cite{farenzena:collabem} has suggested that human beings behave like that because in the real world the environment continuously selects against ineffective solutions, since a bad choice in solving a real world problem might cause and agent to cease communication. Since neither the original experiments nor our simulation included such a mechanism, the advantages of that process have not been observed, but they might already be good enough that it may not justify the effort for the agents to evaluate the solutions.
+
+Another explanation might be that humans might find difficult evaluating sudoku partial solutions. Although we have used the number of filled cells as a metric, that is not guaranteed to accurately measure which solution is best, since individuals might fill in cells with the wrong value. That hypothesis is supported by the experiments of~\cite{mason:collablearnet}, which used optimization of multidimensional functions as the problem being solved. This problem has a straightforward and accurate method of determining the fitness of a solution, which is simply the value of the given function for the proposed coordinates. In this experiments, the subjects seemingly did effectively evaluate the proposed solutions, giving preference to the ones that were better evaluated. The difference in behaviour between the two experiments might be because in the latter the fitness of a certain solution was obvious to the agent, while in the former it's not as easy to pick the best solution out of the available ones.
+
+Knowing that, systems that take advantage of human computation might take advantage of the computer aspect of human computation to encourage selection of better-evaluated solutions. One possibility is ordering the neighbours according to the quality of their solutions, with better-evaluated ones being displayed first, instead using a pre-specified or random order. However, that might introduce a _ in the system, while also limiting variability and discouraging individuals that might have eventual more effective evaluation techniques. To avoid that, perhaps simply displaying the evaluation of each solution might be enough to encourage that behaviour.
+
+\begin{figure}
+\caption{Progression of the solution. The graph shows how many agents have successfully solved the puzzle in a given iteration}
+\label{fig:progression}
+\end{figure}
 
 \section{Conclusions}
 
