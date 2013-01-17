@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.3)  17 JAN 2013 12:07
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.3)  17 JAN 2013 15:37
 entering extended mode
 **Article.tex
 (C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.tex
@@ -30,21 +30,18 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\aaai.sty
-Conference Style for AAAI for LaTeX 2e -- version of 1 December 2012
+(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\ijcai13.sty
+Conference Style, version of 6 September 1995 (revised Nov 2010)
 \titlebox=\skip43
+Named Citation Style, version of 30 November 1994
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
-Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks14
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
-Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
@@ -58,6 +55,11 @@ Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
+
+
+Package relsize Warning: Failed to get list of font sizes.
+(relsize)                Falling back to old definition. on input line 81.
+
 )
 ********************************************************
 Package `algorithm2e' Release 5.0 -- january 06 2013 --
@@ -102,6 +104,10 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -165,8 +171,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 20.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 20.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 20.
+(Font)              <12> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 
@@ -176,126 +190,124 @@ LaTeX Warning: No \author given.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 20.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 20.
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
- [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+(Font)              <5> on input line 20.
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 
 ]
-Underfull \hbox (badness 3942) in paragraph at lines 40--41
-[]\OT1/ptm/m/n/10 Other ini-tia-tives have ap-peared, such as the ones
- []
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 45.
 
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 107.
+
+Underfull \vbox (badness 1062) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 103.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 103.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 115.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
  [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 121.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 115.
  [3]
-<trial_and_error_sudoku.png, id=24, 474.27188pt x 472.76625pt>
+<trial_and_error_sudoku.png, id=23, 474.27188pt x 472.76625pt>
 File: trial_and_error_sudoku.png Graphic file (type png)
 
 <use trial_and_error_sudoku.png>
-Package pdftex.def Info: trial_and_error_sudoku.png used on input line 156.
+Package pdftex.def Info: trial_and_error_sudoku.png used on input line 152.
 (pdftex.def)             Requested size: 142.28265pt x 141.83096pt.
 
-<copy_guess_free_most.png, id=26, 416.30531pt x 286.82156pt>
+<copy_guess_free_most.png, id=25, 416.30531pt x 286.82156pt>
 File: copy_guess_free_most.png Graphic file (type png)
 
 <use copy_guess_free_most.png>
-Package pdftex.def Info: copy_guess_free_most.png used on input line 184.
+Package pdftex.def Info: copy_guess_free_most.png used on input line 183.
 (pdftex.def)             Requested size: 249.78511pt x 172.09425pt.
 
-Overfull \hbox (10.39073pt too wide) in paragraph at lines 184--186
+Overfull \hbox (5.87386pt too wide) in paragraph at lines 183--185
 [][] 
  []
 
-<copy_guess_free_prob.png, id=27, 444.91219pt x 266.49562pt>
+<copy_guess_free_prob.png, id=26, 444.91219pt x 266.49562pt>
 File: copy_guess_free_prob.png Graphic file (type png)
 
 <use copy_guess_free_prob.png>
-Package pdftex.def Info: copy_guess_free_prob.png used on input line 191.
+Package pdftex.def Info: copy_guess_free_prob.png used on input line 190.
 (pdftex.def)             Requested size: 266.94936pt x 159.89859pt.
 
-Overfull \hbox (27.55498pt too wide) in paragraph at lines 191--193
+Overfull \hbox (23.0381pt too wide) in paragraph at lines 190--192
 [][] 
  []
 
 
-<copy_guess_free_prob_num_solution_reached.png, id=28, 420.06938pt x 230.36063p
+<copy_guess_free_prob_num_solution_reached.png, id=27, 420.06938pt x 230.36063p
 t>
 File: copy_guess_free_prob_num_solution_reached.png Graphic file (type png)
  <use copy_guess_free_prob_num_solution_reached.png>
 Package pdftex.def Info: copy_guess_free_prob_num_solution_reached.png used on 
-input line 198.
+input line 197.
 (pdftex.def)             Requested size: 252.04358pt x 138.21742pt.
 
-Overfull \hbox (12.6492pt too wide) in paragraph at lines 198--200
+Overfull \hbox (8.13232pt too wide) in paragraph at lines 197--199
 [][] 
  []
 
 [4 <C:/Users/Marcelo/Documents/GitHub/SocialComputingArticle/trial_and_error_su
 doku.png> <C:/Users/Marcelo/Documents/GitHub/SocialComputingArticle/copy_guess_
-free_most.png>] [5 <C:/Users/Marcelo/Documents/GitHub/SocialComputingArticle/co
-py_guess_free_prob.png> <C:/Users/Marcelo/Documents/GitHub/SocialComputingArtic
-le/copy_guess_free_prob_num_solution_reached.png>]
-<progression.png, id=39, 566.86781pt x 280.04625pt>
+free_most.png>] <progression.png, id=33, 566.86781pt x 280.04625pt>
 File: progression.png Graphic file (type png)
- <use progression.png>
-Package pdftex.def Info: progression.png used on input line 221.
-(pdftex.def)             Requested size: 266.4279pt x 131.62173pt.
 
-Overfull \hbox (27.03352pt too wide) in paragraph at lines 221--223
+<use progression.png>
+Package pdftex.def Info: progression.png used on input line 220.
+(pdftex.def)             Requested size: 255.08815pt x 126.01964pt.
+
+Overfull \hbox (11.1769pt too wide) in paragraph at lines 220--222
 [][] 
  []
 
-
-Underfull \hbox (badness 1337) in paragraph at lines 229--230
-\OT1/ptm/m/n/10 mim-ick-ing the same problem-solving en-vi-ron-ments. To
+[5 <C:/Users/Marcelo/Documents/GitHub/SocialComputingArticle/copy_guess_free_pr
+ob.png> <C:/Users/Marcelo/Documents/GitHub/SocialComputingArticle/copy_guess_fr
+ee_prob_num_solution_reached.png>]
+(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.bbl
+Underfull \hbox (badness 4621) in paragraph at lines 65--69
+[]\OT1/ptm/m/n/10 Winter Ma-son and Dun-can J.
  []
 
-(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.bbl) [6 <C:/U
-sers/Marcelo/Documents/GitHub/SocialComputingArticle/progression.png>]
-(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.aux) ) 
+) [6 <C:/Users/Marcelo/Documents/GitHub/SocialComputingArticle/progression.png>
+] (C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.aux) ) 
 Here is how much of TeX's memory you used:
- 2728 strings out of 494045
- 38339 string characters out of 3148382
- 119423 words of memory out of 3000000
- 6008 multiletter control sequences out of 15000+200000
- 21906 words of font info for 45 fonts, out of 3000000 for 9000
+ 2754 strings out of 494045
+ 38670 string characters out of 3148382
+ 120008 words of memory out of 3000000
+ 6025 multiletter control sequences out of 15000+200000
+ 24072 words of font info for 58 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 30i,19n,23p,1639b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Pro
-gram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
-s/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Article.pdf (6 pages, 287267 bytes).
+ 27i,19n,23p,1639b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/P
+rogram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utm
+r8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Article.pdf (6 pages, 284043 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

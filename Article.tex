@@ -1,15 +1,15 @@
-%\documentclass{article}
-%\usepackage{ijcai13}
-%\usepackage{times}
-%\usepackage{latexsym} 
-
-\documentclass[letterpaper]{article}
-\usepackage{aaai}
+\documentclass{article}
+\usepackage{ijcai13}
 \usepackage{times}
-\usepackage{helvet}
-\usepackage{courier}
+\usepackage{latexsym} 
+
+%\documentclass[letterpaper]{article}
+%\usepackage{aaai}
+%\usepackage{times}
+%\usepackage{helvet}
+%\usepackage{courier}
 \usepackage{algorithm2e}
-\frenchspacing
+%\frenchspacing
 
 \usepackage{graphicx}
 
@@ -25,7 +25,7 @@ Social collaboration has been shown to facilitate problem-solving activity in a 
 
 \section{Introduction}
 
-For years multi-agent systems have been used to research cooperation as a tool for problem-solving. Recently, however, there has been an increasing interest in the study of human beings as problem-solving agents. Several experiments have been conducted in which subjects are connected in a network with the goal of collectively solving a specific problem, and those have helped shed some light on the way humans interact to solve problems. However, although those studies can provide us with observations and hypotheses, there is still a difficulty in finding ways to explain the observed behaviour. In this paper, we use a multi-agent based simulation to complement the study of human computation, as a way of explaining the strategies used by humans and understanding their consequences in a cooperative environment. The control that simulations provide us over the behaviour of the agents allows us to better understand possible reasons for the ones displayed by humans.
+For years multi-agent systems have been used to research cooperation as a tool for problem-solving. Recently, however, there has been an increasing interest in the study of human beings as problem-solving agents. Several experiments have been conducted in which subjects are connected in a network with the goal of collectively solving a specific problem, and those have helped shed some light on the way humans interact to solve problems as well as on the dynamics of working groups~\cite{woolley:evidencecollective}. However, although those studies can provide us with observations and hypotheses, there is still a difficulty in finding ways to explain the observed behaviour. In this paper, we use a multi-agent based simulation to complement the study of human computation, as a way of explaining the strategies used by humans and understanding their consequences in a cooperative environment. The control that simulations provide us over the behaviour of the agents allows us to better understand possible reasons for the ones displayed by humans.
 
 Human beings are known to be able to easily perform tasks which are still generally difficult for computers, such as natural language processing and image recognition. However, it would be useful to be able to apply human social computation to more straightforward computer problems with precise definitions and algorithms, but which are still computationally intensive. The different sets of abilities between computers and humans suggest that the latter might provide a new approach to those problems that might be more effective than current techniques employed by computers. That notion has been successfully applied, for example, in one of the most significant problems in the field of bioinformatics: protein structure prediction (PSP). A software that presents the problem to humans as an online computer game, called \emph{Foldit}~\cite{cooper:foldit}, has produced significant results in the research of PSP, which is usually approached as an optimization problem requiring extensive computational power. Those results have been attributed to human visual problem-solving and decision-making abilities, as well as social collaboration~\cite{cooper:foldit}. However, we still don't know the limits of human abilities in problem-solving and how they compare to more traditional techniques. To take full advantage of human problem-solving strategies, we must learn their limitations. In order to obtain that knowledge, our system simulates human behaviour according to findings of social computation experiments.
 
@@ -35,11 +35,11 @@ Social computation is a relatively new area of research with a diversified, inte
 
 The origin of human computation as we know it today can be traced back to the work of~\cite{vonahm:gwap}, which identified the possibility of using entertainment as an incentive to participation of human subjects, applying it in games in which the participants are actually performing a computation. That is an idea that also appears in the Foldit game.
 
-The series of experiments summarized in~\cite{kearns:experim} are among the first to try to take advantage of the collective's problem-solving abilities to solve classical computer problems. The experiments are mostly based on the concept of coordination: subjects have individual incentives that are expected to drive them to cooperate with one another and lead them toward the collective goal.
+The series of experiments summarized in~\cite{kearns:experim} are among the first to try to take advantage of the collective's problem-solving abilities to solve classical computer problems. The experiments are mostly based on the concept of coordination: subjects have individual incentives that are expected to drive them to cooperate with one another and lead them toward the collective goal ~\cite{nowak:evolutioncooperation}.
 
 Other initiatives have appeared, such as the ones by~\cite{farenzena:collabem} and~\cite{mason:collablearnet}, which take a different approach by having subjects trying to solve the collective problem individually, with the possibility of exchanging solutions between neighbours. Those have resulted in interesting conclusions on human behaviour when the possibility of copying peers makes itself present. It's in those models of experiments that we will focus in this work.
 
-The experiments conducted by~\cite{farenzena:collabem} had human beings trying to solve constraint satisfaction problems, namely Boolean Satisfiability (SAT) and the popular \emph{Sudoku} game, with individuals connected through the network being able to exchange partial solutions of the problem in question. There were two main patterns of behaviour observed in this study in regard to copying neighbours' solutions:
+The experiments conducted by~\cite{farenzena:collabem} had human beings trying to solve constraint satisfaction problems, namely Boolean Satisfiability (SAT)~\cite{cook:complexitytheoremproving} and the popular \emph{Sudoku} game~\cite{weber:satsudoku}, with individuals connected through the network being able to exchange partial solutions of the problem in question. There were two main patterns of behaviour observed in this study in regard to copying neighbours' solutions:
 
 \begin{itemize}
 	\item Humans might not evaluate the solutions proposed by their peers, instead choosing the most readily available one. On the other hand,~\cite{mason:collablearnet} suggest that their subjects did evaluate the available solutions, although an in-depth analysis of that wasn't provided.
@@ -51,10 +51,6 @@ The experiments conducted by~\cite{farenzena:collabem} had human beings trying t
 \section{Contribution}
 
 We have developed and detailed a novel method for artificial social problem solving which draws inspiration from the {\em Memetic Networks} model proposed by~\cite{araujo:memenet}. It was used it to built a multi-agent system that simulates the experiments of~\cite{farenzena:collabem}, using the model of human behaviour proposed by them. For simplicity, we limited our experiments to the {\em Sudoku} problem. Our goal is verifying whether the strategies employed by humans are competitive with other heuristics. After identifying the points in which those are lacking, we will then propose methods to increase the efficiency of human problem-solving networks.
-
-\section{System Overview}
-
-We developed a system in which the environment of the {\em Sudoku} problem-solving social network presented in~\cite{farenzena:collabem} could be modelled through autonomous agent networks and analysed through a series of experiments. We conceived a novel method for artificial social problem solving which draws inspiration from the optimization technique of {\em Memetic Networks}~\cite{araujo:memenet}.
 
 \section{A Novel Method for Artificial Social Problem Solving}
 
@@ -171,6 +167,9 @@ Social Backtracking: When faced with one or more conflicts in its own solution, 
 
 \end{itemize}
 
+\subsection{Network Topology}
+
+We modelled our agent networks through the network topologies employed by~\cite{farenzena:collabem} in their tests with human social networks. The topologies used were the {\em fully connected} topology, the {\em scale free} topology~\cite{barabasi:linked}, the {\em ring-2} topology and the {\em ring-3} topology~\cite{newman:newtorks}.
 
 \section{Results and Analysis}
 
@@ -218,15 +217,15 @@ Another explanation might be that humans might find difficult evaluating sudoku 
 Knowing that, systems that take advantage of human computation might take advantage of the computer aspect of human computation to encourage selection of better-evaluated solutions. One possibility is ordering the neighbours according to the quality of their solutions, with better-evaluated ones being displayed first, instead using a pre-specified or random order. However, that might introduce a (BLANK) in the system, while also limiting variability and discouraging individuals that might have eventual more effective evaluation techniques. To avoid that, perhaps simply displaying the evaluation of each solution might be enough to encourage that behaviour.
 
 \begin{figure}
-\includegraphics[scale=0.47]{progression}
+\includegraphics[scale=0.45]{progression}
 \caption{Progression of the solution. The graph shows how many agents have successfully solved the puzzle in a given iteration (scale-free topology)
 }
 \label{fig:progression}
 \end{figure}
 
-\section{Conclusions}
+\section{Conclusions and Further Work}
 
-We compared results from social computing experiments done with human subjects with agent-based simulations mimicking the same problem-solving environments. To do this, we proposed a novel method for artificial social problem-solving and used it to model the {\em Sudoku} problem-solving environment studied by~\cite{farenzena:collabem}. We reached important conclusions concerning the dynamics of problem-solving collaborative environments: the behaviours of copying and guessing are shown to be beneficial to these systems. We also discuss the benefits of the behaviour of evaluating neighbours' solutions in order to select one of them for copying, rather than simply selecting a random solution or even the most readily available one, as the analysis conducted by~\cite{farenzena:collabem} has shown to be the case sometimes. Thus, having in mind the fact that the strategies employed by human subjects are often not the most efficient, we proposed a collection of guidelines concerning the design of human computation systems, which intend to improve the performance of the human subjects they employ.
+We compared results from social computing experiments done with human subjects with agent-based simulations mimicking the same problem-solving environments. To do this, we proposed a novel method for artificial social problem-solving and used it to model the {\em Sudoku} problem-solving environment studied by~\cite{farenzena:collabem}. We reached important conclusions concerning the dynamics of problem-solving collaborative environments: the behaviours of copying and guessing are shown to be beneficial to these systems. We also discuss the benefits of the behaviour of evaluating neighbours' solutions in order to select one of them for copying, rather than simply selecting a random solution or even the most readily available one, as the analysis conducted by~\cite{farenzena:collabem} has shown to be the case sometimes. With these results in mind, we conjectured that some proprieties of the graphic interface (as ordering the neighbours' solutions by the value of a evaluation function) could guide human subjects into the right direction, improving the performance of the social network. The validation of this hypothesis has been set as our future path and is currently being pursued.
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
 \bibliographystyle{named}

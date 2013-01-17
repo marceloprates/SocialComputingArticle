@@ -12,6 +12,16 @@ Ricardo Araujo and Luis Lamb.
   multi-agent performance.
 \newblock In {\em AAAI'08}, pages 3--8, 2008.
 
+\bibitem[\protect\citeauthoryear{Barabasi}{2002}]{barabasi:linked}
+A.~Barabasi.
+\newblock {\em Linked: The New Science of Networks}.
+\newblock Basic Books, 2002.
+
+\bibitem[\protect\citeauthoryear{Cook}{1971}]{cook:complexitytheoremproving}
+S.~Cook.
+\newblock The complexity of theorem proving procedures.
+\newblock In {\em Proc. 10th ACM conf. on Elec. Comm.}, pages 159--168, 1971.
+
 \bibitem[\protect\citeauthoryear{Cooper}{2011}]{cooper:foldit}
 Seth Cooper.
 \newblock Algorithm discovery by protein folding game players.
@@ -56,5 +66,28 @@ Winter Mason and Duncan~J. Watts.
 \newblock Collaborative learning in networks.
 \newblock In {\em Proceedings of the National Academy of Sciences}, volume
   2011, pages 764--769, November 2011.
+
+\bibitem[\protect\citeauthoryear{Newman}{2010}]{newman:newtorks}
+M.~Newman.
+\newblock {\em Networks: An Introduction}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem[\protect\citeauthoryear{Nowak}{2006}]{nowak:evolutioncooperation}
+M.~A. Nowak.
+\newblock Five rules for the evolution of cooperation.
+\newblock In {\em Science}, volume 314, pages 1560--1563, 2006.
+
+\bibitem[\protect\citeauthoryear{Weber}{2005}]{weber:satsudoku}
+T.~Weber.
+\newblock A sat-based sudoku solver.
+\newblock In {\em 12th Int. Conf. Logic for Prog., Art. Int., and Reas.}, pages
+  11--15, 2005.
+
+\bibitem[\protect\citeauthoryear{Woolley \bgroup \em et al.\egroup
+  }{2010}]{woolley:evidencecollective}
+A.~W. Woolley, C.~F. Chabris, A.~Pentland, N.~Hashmi, and T.~Malone.
+\newblock Evidence for a collective intelligence factor in the performance of
+  human groups.
+\newblock In {\em Science}, volume 330, pages 686--688, 2010.
 
 \end{thebibliography}
