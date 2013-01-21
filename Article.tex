@@ -41,25 +41,15 @@ Other initiatives have appeared, such as the ones by~\cite{farenzena:collabem} a
 
 The experiments conducted by~\cite{farenzena:collabem} had human beings trying to solve constraint satisfaction problems, namely Boolean Satisfiability (SAT)~\cite{cook:complexitytheoremproving} and the popular \emph{Sudoku} game~\cite{weber:satsudoku}, with individuals connected through the network being able to exchange partial solutions of the problem in question. In that study a specific pattern of behaviour was observed which suggests that humans might not evaluate the solutions proposed by their peers, instead choosing the most readily available one. That behaviour is referred to as an evidence of conformism by the human subjects. On the other hand,~\cite{mason:collablearnet} seem to suggest that their subjects did evaluate the available solutions, although an in-depth analysis of that fact wasn't provided. That might mean that multiple factors might influence the behaviour of human agents. We analyse possible reasons for that in the \emph{Results} section.
 
-\cite{mason:collablearnet} also provided important insights to human cooperation. However, since our basis is the work of~\cite{farenzena:collabem} we will use the former's results only as secondary support.
-
 \section{Contribution}
 
-We have developed and detailed a novel method for artificial social problem solving which draws inspiration from the {\em Memetic Networks} model proposed by~\cite{araujo:memenet}. It was used to build a multi-agent system that simulates the experiments of~\cite{farenzena:collabem}, using the model of human behaviour proposed by them. For simplicity, we limited our experiments to the {\em Sudoku} problem. Our goal is verifying whether the strategies employed by humans are competitive with other heuristics. After identifying the points in which those are lacking, we will then propose methods to increase the efficiency of human problem-solving networks.
+We have developed and detailed a novel method for artificial social problem solving which draws inspiration from the {\em Memetic Networks} model proposed by~\cite{araujo:memenet}. It was then applied to build a multi-agent system that simulates the experiments of~\cite{farenzena:collabem}, using the model of human behaviour proposed by them. We limited our experiments to the {\em Sudoku} problem, which is more attractive and accessible to human beings while still remaining NP-complete and equivalent to SAT. Through that process, we compared the behaviour observed in humans with other strategies and reached the conclusion that it is detrimental to the problem-solving process. We verify that even an inaccurate metric of evaluation surpasses choosing an arbitrary neighbour to copy. In addition, we analyse the impact that copying and guessing have on the solving of the problem. After obtaining those results, we are able to propose a set of guidelines for the design of social problem-solving systems that might address those issues and improve the performance of human computing.
 
 \section{A Novel Method for Artificial Social Problem Solving}
 
 A number of multi-agent methodologies that employ information flow through agents have been studied before. For instance, the {\em Memetic Networks} model proposed by~\cite{araujo:memenet} draws inspiration from the phenomenon of {\em Cultural Evolution} discussed by Dawkins in~\cite{dawkins:selfishgene} and has a network of agents sharing, copying and incrementing units of information in a similar way that nature, according to Dawkins, deals with {\em Memes}~\cite{dawkins:selfishgene}. Nevertheless, some aspects of social behaviour of great significance to social computing cannot be properly analysed through this methodologies. One example is the conformist behaviour studied in~\cite{cefferson:conformists} and~\cite{farenzena:collabem}. The proper study of these aspects demands a novel method for artificial collaborative problem solving.
 
 We propose a method for solving computational problems by the means of a network of agents with social behaviour. Our algorithm is composed of an ordered set of $N$ agents, each encoding a partial solution to the problem, and a binary $N \times N$ matrix representing possible connections between agents. Additionally, our algorithm is composed of two stages, namely the {\em Social Stage} and the {\em Cognitive Stage}. 
-
-\begin{itemize}
-\item
-Social Stage: In the {\em Social Stage}, messages are passed from agent to agent through the network connections. Agents are thus presented with a multiplicity of messages. There is a particular probability associated with the behaviour of agents choosing to copy one of these solutions in contrast to keeping their current solutions. We call this probability the {\em Copy Rate}. When an agent chooses to copy, he or she is then supposed to select for copying only one of his or her received messages. This is done by the means of a particular message-selecting metric.
-
-\item
-Cognitive Stage: In the {\em Cognitive Stage}, agents are supposed to add local changes to the messages copied in the previous stage. This is done by the means of a heuristic or an exact method.
-\end{itemize}
 
 \begin{algorithm}
  \SetAlgoLined
@@ -96,8 +86,16 @@ Cognitive Stage: In the {\em Cognitive Stage}, agents are supposed to add local 
  		Add local changes to $A_{i}$'s solution%$A_{i}$.solution = addLocalChanges($A_{i}$.solution)\;
  	}
  }
- \caption{No name yet}
+ \caption{Algorithm for the proposed model, encompassing the social and cognitive stages}
 \end{algorithm}
+
+\begin{itemize}
+\item
+Social Stage: In the {\em Social Stage}, messages are passed from agent to agent through the network connections. Agents are thus presented with a multiplicity of messages. There is a particular probability associated with the behaviour of agents choosing to copy one of these solutions in contrast to keeping their current solutions. We call this probability the {\em Copy Rate}. When an agent chooses to copy, he or she is then supposed to select for copying only one of his or her received messages. This is done by the means of a particular message-selecting metric.
+
+\item
+Cognitive Stage: In the {\em Cognitive Stage}, agents are supposed to add local changes to the messages copied in the previous stage. This is done by the means of a heuristic or an exact method.
+\end{itemize}
 
 \section{Performance Tests}
 
@@ -105,11 +103,11 @@ In order to validate the algorithm as a social problem-solving technique, we hav
 
 \subsection{Social Stage}
 
-The experiments conducted by~\cite{farenzena:collabem} point out a series of observations about the dynamics of cooperation in problem solving with human beings. For instance, the authors analysis has shown that human subjects are more likely to engage in the behaviour of copying the most readily available solutions on the graphic interface than in that of copying the most complete solutions. In order to analyse and compare these two behaviours, he have modelled each one of them as a message-selecting metric for the {\em Social Stage}.
+The experiments conducted by~\cite{farenzena:collabem} point out a series of observations about the dynamics of cooperation in problem solving with human beings. For instance, the authors analysis has shown that human subjects are more likely to engage in the behaviour of copying the most readily available solutions on the graphic interface than in that of evaluating the available solutions and choosing the best according to some criterion. We have modelled three message-selecting strategies to employ in the \emph{Social Stage}, where the first attempts to evaluate the solutions and choose the best one, the second mimics the human behaviour of selecting the first solutions with greater probability and the third simply picks a neighbour at random to copy.
 
 \subsubsection{{\em Pick Most Filled} metric}
 
-This metric employs the intuitive strategy of selecting the most complete message for copying. In the specific case of {\em Sudoku} solving, this metric selects the most filled {\em Sudoku} partial solution. Put in other words, it selects the {\em Sudoku} partial solution with the lesser number of blank cells.
+This metric employs the intuitive strategy of selecting the most complete message for copying. In the specific case of {\em Sudoku} solving, this metric selects the most filled {\em Sudoku} partial solution. Put in other words, it selects the {\em Sudoku} partial solution with the least number of blank cells.
 
 \subsubsection{{\em Pick Among First} metric}
 
@@ -117,11 +115,15 @@ We know that, in some settings of collaborative problem-solving, human subjects 
 
 We inserted this behaviour into our model by firstly generating a random ordering of neighbours for each agent in order to compose a simulated graphic interface. As a result, each agent visualizes some neighbours before or after others. Secondly, we translated the above mathematical model into a message-selecting metric in which the solution selected by an agent is the $k_{th}$ with probability $\langle X(k)\rangle$.
 
+\subsubsection{{\em Pick Random} metric}
+
+This metric selects an arbitrary solution giving equal probability to each neighbour.
+
 \subsection{Cognitive Stage}
 
-{\em Sudoku} solving techniques are abundant in {\em Sudoku} strategy literature. Davis ~\cite{davis:mathsudoku} discusses a collection of these techniques, of which the {\em Naked Singles} rule, the {\em Hidden Singles} rule and the {\em Naked Twins} rule are some examples. These techniques intend to, given a partial {\em Sudoku} solution, generate a set of {\em movements} which can be used to mark cells of this {\em Sudoku} puzzle. We implemented $5$ of these rules, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of {\em movements}. These functions can be used in the {\em Cognitive Stage} to add local changes to the {\em Sudoku} message received in the {\em Social Stage}.
+{\em Sudoku} solving techniques are abundant in {\em Sudoku} strategy literature. Those techniques are based on the reasoning usually employed by humans to solve \emph{Sudoku} puzzles. Davis~\cite{davis:mathsudoku} discusses a collection of these techniques, of which the {\em Naked Singles} rule, the {\em Hidden Singles} rule and the {\em Naked Twins} rule are some examples. These techniques intend to, given a partial {\em Sudoku} solution, generate a set of {\em movements} which can be used to mark cells of this {\em Sudoku} puzzle. We implemented $5$ of these rules, modelling each one of them as a function that maps a {\em Sudoku} partial solution to a set of {\em movements}. These functions can be used in the {\em Cognitive Stage} to add local changes to the {\em Sudoku} message received in the {\em Social Stage}.
 
-The rules implemented were the {\em Unique Missing Candidate} rule, the {\em Naked Singles} rule, the {\em Hidden Singles} rule, the {\em Two out of Three} rule and the {\em Naked Twins} rule, all of which (with the exception of the {\em Two out of Three} rule) are discussed in~\cite{davis:mathsudoku}. In our modelling, each agent knows a particular quantity of rules, this quantity determining the agent's {\em level}. Our tests were all conducted with a heterogeneous population of agents of different {\em levels}. We detail below the 'two out of three' rule. For details on the other $4$ rules, see ~\cite{davis:mathsudoku}.
+The rules implemented were the {\em Unique Missing Candidate} rule, the {\em Naked Singles} rule, the {\em Hidden Singles} rule, the {\em Two out of Three} rule and the {\em Naked Twins} rule, all of which (with the exception of the {\em Two out of Three} rule) are discussed in~\cite{davis:mathsudoku}. In our modelling, each agent knows a particular quantity of rules, this quantity determining the agent's {\em level}. Our tests were all conducted with a heterogeneous population of agents of different {\em levels}. We detail below the 'two out of three' rule. For details on the other $4$ rules, see~\cite{davis:mathsudoku}.
 
 \subsubsection{Two out of Three Rule}
 
@@ -132,12 +134,6 @@ This rule applies to groups of three contiguous $3 \times 3$ blocks. It aims to 
 In a study conducted by~\cite{farenzena:collabem}, subjects were invited to solve {\em Sudoku} puzzles and share them with other subjects with whom they were connected through a network topology. At any time, a player could copy solutions from one of his or her neighbours. The authors' analysis has shown that there is a different copy frequency associated with each topology. For instance, the scale free topology with $\gamma = 1.65$ resulted in a copy frequency of $87 \%$, while the fully connected topology resulted in a copy frequency of $42 \%$.
 
 We incorporated this copying frequency into our modelling, recreating the scenario of the experiments conducted by~\cite{farenzena:collabem} by setting this parameter accordingly to the topologies we used.
-
-\subsection{Conformist Behaviour}
-
-We introduce in our modelling the {\em conformist} behaviour proposed by~\cite{cefferson:conformists} and further studied by~\cite{farenzena:collabem}, which states that agents are likely to copy a particular solution when surrounded by neighbours that share this solution. 
-
-Our approach was to establish a {\em treshold} determining a minimum necessary quantity $N$ of neighbours sharing a particular solution. In our modelling, all agents with $N$ or more neighbours having a solution $s$ in common are programmed to copy solution $s$ from them.
 
 \subsection{Guessing and Backtracking}
 
@@ -151,16 +147,7 @@ We have consistent evidence that trial-and-error is a part of the {\em Sudoku} s
 
 In our modelling, we associate each agent with a numerical parameter determining the probability this agent has to guess when incapable of applying a typical {\em Sudoku} solving strategy.
 
-Automatic {\em Sudoku} solvers employing a backtracking algorithm are easily programmed and very time-efficient. On the other hand, the space complexity of these algorithms is a barrier to most human solvers, who need to write down tons of observations in order to employ a backtracking strategy. With this in mind, we propose in our modelling two different kinds of backtracking, intended to be more similar to the way human beings employ error correction in {\em Sudoku} solving in a collaborative environment such as the one analysed in~\cite{farenzena:collabem}.
-
-\begin{itemize}
-
-\item
-Local Backtracking: When faced with one or more conflicts in its own solution, an agent simply erases the conflicting cells.
-\item
-Social Backtracking: When faced with one or more conflicts in its own solution, an agent copies a solution from one of its neighbours. In our modelling, this is done by raising the copy rate of this particular agent to $1$.
-
-\end{itemize}
+Automatic {\em Sudoku} solvers employing a backtracking algorithm are easily programmed and very time-efficient. On the other hand, the space complexity of these algorithms is a barrier to most human solvers, who need to write down tons of observations in order to employ a backtracking strategy. With this in mind, we propose in our modelling a different kind of backtracking, intended to be more similar to the way human beings employ error correction in {\em Sudoku} solving in a collaborative environment such as the one analysed in~\cite{farenzena:collabem}, which we refer to as \emph{social backtracking}. In it, when faced with one or more conflicts in its own solution, an agent copies a solution from one of its neighbours. In our modelling, this is done by raising the copy rate of this particular agent to $1$.
 
 \subsection{Network Topology}
 
@@ -172,13 +159,15 @@ We tested the above modelling using an heterogeneous, uniform agent distribution
 
 \subsection{A Novel Method For Simulating Human Problem-Solving Networks}
 
+We have proposed a model based on social psychology to simulate human behaviour in a problem-solving social network. Through it, we can simulate previous experiments performed on humans by modelling the observed behaviour as the cognitive and social stages. That will allow us to examine the consequences of that behaviour without having to enlist human subjects, which is usually expensive and time-consuming~\cite{?}. Moreover this model can be used as a guide of what to look for in the data collected by the experiments, in which the strategies employed by the subjects to solve the problem individually are mapped into the cognitive stage and the metric employed to pick a neighbour to copy, into the social stage.
 
+We have applied the model into one such human computing experiment and reached particular conclusions about the methods employed by humans on it. Since the same behaviour was observed for different problems, we can expect these results to be generalized to a certain class of problems and systems with specific characteristics. We provide further analysis and details below.
 
 \subsection{Copying and Guessing are Beneficial to the Algorithm's Performance}
 
 The authors of~\cite{farenzena:collabem} have stated that, in their settings, {\em "cooperation works because agents can copy each other"}. Basing ourselves in that statement, we adopted the hypothesis that a higher copy rate would improve performance of the network. On the other hand, regarding the process of guessing we took the opposite standing, that it would decrease performance. We based that hypothesis on the notion that, when an agent makes a guess, it has a high chance of filling a cell with the wrong value. Once that happens, that grid will assuredly be unable to lead to the right solution until the agent copies a grid without errors from one of its neighbours. Therefore, we hypothesised that if an agent can't make a logical move using its level of \emph{Sudoku}-solving skills, it's better for it to wait for its more capable neighbours to improve the solution and copy from them, instead of risking making and incorrect move.
 
-Regarding our first hypothesis, our experiments indicate that, indeed, in some of the topologies tested, the {\em copy rate} has a decisive role in enhancing the network's performance. To our surprise, however, they also indicate that guessing shows no signs of being detrimental to the process. On the contrary, in several cases it actually contributes to advancing the solution. The graphs in Figure~\ref{fig:copy_guess_free_most} and Figure~\ref{fig:copy_guess_free_prob} both show a maximum in ({\em copy rate}: 7, {\em guess rate}: 0) and a minimum in ({\em copy rate}: 87, {\em guess rate}: 100), indicating that the greater the {\em copy} and {\em guess} rates are, the fewer iterations are needed for the agents to solve the problem. We understand this is due to the fact that some agents of low levels are incapable of solving some instances of the {\em Sudoku} problem, not knowing the {\em Sudoku} solving rules needed to mark its cells. These agents have no hope solving the problem without some guessing mechanism, and take advantage of high {\em copy rates}, which can be used to correct wrong guesses through copying better agent's solutions.
+Regarding our first hypothesis, our experiments indicate that, indeed, in some of the topologies tested, the {\em copy rate} has a decisive role in enhancing the network's performance. To our surprise, however, they also indicate that guessing shows no signs of being detrimental to the process. On the contrary, in several cases it actually contributes to advancing the solution. The graphs in Figure~\ref{fig:copy_guess_free_most} and Figure~\ref{fig:copy_guess_free_prob} both show a maximum in ({\em copy rate}: 7, {\em guess rate}: 0) and a minimum in ({\em copy rate}: 87, {\em guess rate}: 100), indicating that the greater the {\em copy} and {\em guess} rates are, the fewer iterations are needed for the agents to solve the problem. We understand this is due to the fact that some agents of low levels are incapable of solving some instances of the problem, not knowing the {\em Sudoku} solving rules needed to mark its cells. These agents have no hope solving the problem individually without some guessing mechanism, and the high {\em copy rates} allow them to correct wrong guesses through copying better agents' solutions.
 
 The results also differ depending on the copying strategy employed in the \emph{social stage}. It can be observed that the copy rate has more influence over how fast the correct solution spreads through the network if the agents are evaluating their neighbour's solutions. The graph in Figure~\ref{fig:copy_guess_free_most} shows that as copying increases, the number of rounds necessary for all agents to have the correct solution decreases sharply until it stabilizes in a roughly optimal level. Meanwhile, the benefits of guessing are much less pronounced. On the other hand, when the agents don't evaluate the neighbours' solutions, as can be seen in Figure~\ref{fig:copy_guess_free_prob}, their contributions don't differ as much. Those results confirm that the worth of copying increases when the proposed solutions are evaluated.
 
@@ -207,7 +196,7 @@ Also, as shown in Figure~\ref{fig:copy_guess_free_prob_num_solution_reached}, th
 
 \subsection{Evaluating the Neighbours' Solutions is Beneficial to the Algorithm's Performance}
 
-Of the three metrics employed by us in the \emph{Social Stage}, only one had the agent evaluate the content of the solutions proposed by their neighbours. Another chose who to copy based on position, simulating observed human behaviour~\cite{farenzena:collabem}, and the remaining one chose a neighbour randomly. Our hypothesis was that the first metric would perform better than the other two, a result which would confirm our belief that problem-solving social networks are able to respond positively to the employment of evaluation functions.
+Of the three metrics employed by us in the \emph{Social Stage}, only one had the agent evaluate the content of the solutions proposed by their neighbours. Another chose who to copy based on position, simulating observed human behaviour~\cite{farenzena:collabem}, and the remaining one chose a neighbour randomly. Our hypothesis was that the first metric would perform better than the other two, a result which would confirm our belief that problem-solving social networks respond positively to the employment of evaluation functions.
 
 As can be seen in Figure~\ref{fig:progression}, our experiments have shown that evaluating the proposed solutions indeed brings significantly better results, despite the fact that humans seemingly avoid that strategy~\cite{farenzena:collabem}. In all topologies, choosing the solution with the largest number of filled cells not only allows agents to solve the instance earlier, but also causes the network to converge faster to the correct solution. That is, once one individual has found the correct solution, that solution spreads faster through the network if the other agents are evaluating the solutions that reach them instead of copying an arbitrary one.
 
@@ -215,11 +204,17 @@ The strategy based on the behaviour observed in humans fared roughly the same as
 
 Even so, that behaviour has been observed in human networks. In~\cite{farenzena:collabem} the authors suggest that it is justified in the real world because "in a non-virtual environment, the feedback of the environment can cause an agent to stop communicating, e.g. in the case of injury or death", so there would be no need for an agent to evaluate solutions because the environment is already selecting against ineffective ones. Since neither the original experiments nor our simulation included such a mechanism of natural selection, the advantages of that process have not been observed, but they might already be good enough that it would be unnecessary for the agents to have to spend effort evaluating the solutions.
 
-Another explanation might be that humans might find difficult evaluating sudoku partial solutions. Although we have used the number of filled cells as a metric, that is not guaranteed to accurately measure which solution is best, since individuals might fill in cells with the wrong value. That hypothesis is supported by the experiments of~\cite{mason:collablearnet}, which used optimization of multidimensional functions as the problem being solved. This problem has a straightforward and accurate method of determining the fitness of a solution, which is simply the value of the given function for the proposed coordinates. In this experiments, the subjects seemingly did effectively evaluate the proposed solutions, giving preference to the ones that were better evaluated. The difference in behaviour between the two experiments might be because in the latter the fitness of a certain solution was obvious to the agent, while in the former it's not as easy to pick the best solution out of the available ones.
+Another explanation might be that humans might find difficult evaluating sudoku partial solutions. Although we have used the number of filled cells as a metric, that is not guaranteed to accurately measure which solution is best, since individuals might fill in cells with the wrong value. That hypothesis is supported by the experiments of~\cite{mason:collablearnet}, which used optimization of a bidimensional function as the problem being solved. This problem has a straightforward and accurate method of determining the fitness of a solution, which is simply the value of the given function for the proposed coordinates. In this experiments, the subjects seemingly did effectively evaluate the proposed solutions, giving preference to the ones that were better evaluated. The difference in behaviour between the two experiments might be because in the latter the fitness of a certain solution was obvious to the agent, while in the former it's not as easy to pick the best solution out of the available ones.
+
+Our experiments, however, have shown that although completeness is not necessarily an accurate measurement of quality, it was good enough to lead the network to the right solution. Not only that, it consistently performed better than the other strategies, even with high guess rates. That means that the incorrect guesses were successfully filtered out, allowing the correct solutions to prevail. Those results might extend to other constraint satisfaction problems that don't have an accurate method of evaluation. Therefore, it is not necessary for the problem addressed to have an exact metric to compare different possible solutions. An imperfect metric is good enough to be employed in a problem-solving social network. 
+
+Also,~\cite{mason:collablearnet} differed in that each player had exactly three neighbours. That fact allowed the players to see all of their neighbours at the same time in the interface, and limit their attention to less data.~\cite{farenzena:collabem} suggests that future experiments might prefer to limit their topology to smaller degrees, seeing as subjects tend to not look beyond their first few neighbours. It is possible for the large number of neighbours to have discouraged an in-depth evaluation of the solutions by the players.
 
 \subsection{Small Changes on the Interface Might Improve the Performance of Human Beings in Human Computation Environments}
 
-Knowing that, systems that take advantage of human computation might take advantage of the computer aspect of human computation to encourage selection of better-evaluated solutions. One possibility is ordering the neighbours according to the quality of their solutions, with better-evaluated ones being displayed first, instead using a pre-specified or random order. However, that might introduce an overhead in the system, while also limiting variability and discouraging individuals that might have eventual more effective evaluation techniques. To avoid that, perhaps simply displaying the evaluation of each solution might be enough to encourage that behaviour.
+Considering the previous results, systems of human computation might take advantage of the interface to encourage selection of better-evaluated solutions. One possibility is to display the evaluation of each solution to encourage players to copy the ones with better score. However, the SAT experiments from~\cite{farenzena:collabem} actually assigned a score to each solution displayed to the users, who nevertheless chose according to position rather than evaluation. Another possibility is ordering the neighbours according to the quality of their solutions, with better-evaluated ones being displayed first, instead of using a pre-specified or random order.
+
+The limitation on the network's degree suggested by~\cite{farenzena:collabem} and employed by~\cite{mason:collablearnet} is also promising, and displays evidence of success. Fewer connections allows for all neighbours to be displayed in the interface at once, without necessity of effort by the user by clicking buttons or scrolling. Moreover, humans might feel more encouraged to evaluate their neighbours if the number of possible solutions is limited.
 
 \begin{figure}
 \includegraphics[scale=0.45]{progression}
@@ -230,7 +225,7 @@ Knowing that, systems that take advantage of human computation might take advant
 
 \section{Conclusions and Further Work}
 
-We compared results from social computing experiments done with human subjects with agent-based simulations mimicking the same problem-solving environments. To do this, we proposed a novel method for artificial social problem-solving and used it to model the {\em Sudoku} problem-solving environment studied by~\cite{farenzena:collabem}. We reached important conclusions concerning the dynamics of problem-solving collaborative environments: the behaviours of copying and guessing are shown to be beneficial to these systems. We also discuss the benefits of the behaviour of evaluating neighbours' solutions in order to select one of them for copying, rather than simply selecting a random solution or even the most readily available one, as the analysis conducted by~\cite{farenzena:collabem} has shown to be the case sometimes. With these results in mind, we conjectured that some proprieties of the graphic interface (as ordering the neighbours' solutions by the value of a evaluation function) could guide human subjects into the right direction, improving the performance of the social network. The validation of this hypothesis has been set as our future path and is currently being pursued.
+We compared results from social computing experiments done with human subjects with agent-based simulations mimicking the same problem-solving environments. To do this, we proposed a novel method for artificial social problem-solving and used it to model the {\em Sudoku} problem-solving environment studied by~\cite{farenzena:collabem}. We reached important conclusions concerning the dynamics of problem-solving collaborative environments: the behaviours of copying and guessing are shown to be beneficial to these systems. We also discuss the benefits of the behaviour of evaluating neighbours' solutions in order to select one of them for copying, rather than simply selecting a random solution or even the most readily available one, as the analysis conducted by~\cite{farenzena:collabem} has shown to be the case sometimes. With these results in mind, we conjectured that some properties of the graphic interface (as ordering the neighbours' solutions by the value of a evaluation function) could guide human subjects into the right direction, improving the performance of the social network. The validation of this hypothesis has been set as our future path and is currently being pursued.
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
 \bibliographystyle{named}

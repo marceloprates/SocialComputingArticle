@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.1.4)  19 JAN 2013 15:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.1.4)  21 JAN 2013 00:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -253,121 +253,119 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 45.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 88.
+
+(c:/texlive/2012/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 94.
 
 (c:/texlive/2012/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
-
-Underfull \vbox (badness 1062) has occurred while \output is active []
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 103.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 103.
-
-
-(c:/texlive/2012/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 94.
  [2]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 115.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 108.
  [3]
 <trial_and_error_sudoku.png, id=24, 474.27188pt x 472.76625pt>
 File: trial_and_error_sudoku.png Graphic file (type png)
 
 <use trial_and_error_sudoku.png>
-Package pdftex.def Info: trial_and_error_sudoku.png used on input line 152.
+Package pdftex.def Info: trial_and_error_sudoku.png used on input line 143.
 (pdftex.def)             Requested size: 142.28265pt x 141.83096pt.
-
-
-LaTeX Warning: Reference `copy_guess_free_most' on page 4 undefined on input li
-ne 184.
-
-<copy_guess_free_most.png, id=26, 416.30531pt x 286.82156pt>
+ [4 <./trial_and_error_sudoku.png>]
+<copy_guess_free_most.png, id=30, 416.30531pt x 286.82156pt>
 File: copy_guess_free_most.png Graphic file (type png)
 
 <use copy_guess_free_most.png>
-Package pdftex.def Info: copy_guess_free_most.png used on input line 189.
+Package pdftex.def Info: copy_guess_free_most.png used on input line 177.
 (pdftex.def)             Requested size: 249.78511pt x 172.09425pt.
 
-Overfull \hbox (5.87386pt too wide) in paragraph at lines 189--191
+Overfull \hbox (5.87386pt too wide) in paragraph at lines 177--179
 [][] 
  []
 
-<copy_guess_free_prob.png, id=27, 444.91219pt x 266.49562pt>
+<copy_guess_free_prob.png, id=31, 444.91219pt x 266.49562pt>
 File: copy_guess_free_prob.png Graphic file (type png)
 
 <use copy_guess_free_prob.png>
-Package pdftex.def Info: copy_guess_free_prob.png used on input line 196.
+Package pdftex.def Info: copy_guess_free_prob.png used on input line 184.
 (pdftex.def)             Requested size: 266.94936pt x 159.89859pt.
 
-Overfull \hbox (23.0381pt too wide) in paragraph at lines 196--198
+Overfull \hbox (23.0381pt too wide) in paragraph at lines 184--186
 [][] 
  []
 
 
-<copy_guess_free_prob_num_solution_reached.png, id=28, 420.06938pt x 230.36063p
+<copy_guess_free_prob_num_solution_reached.png, id=32, 420.06938pt x 230.36063p
 t>
 File: copy_guess_free_prob_num_solution_reached.png Graphic file (type png)
  <use copy_guess_free_prob_num_solution_reached.png>
 Package pdftex.def Info: copy_guess_free_prob_num_solution_reached.png used on 
-input line 203.
+input line 191.
 (pdftex.def)             Requested size: 252.04358pt x 138.21742pt.
 
-Overfull \hbox (8.13232pt too wide) in paragraph at lines 203--205
+Overfull \hbox (8.13232pt too wide) in paragraph at lines 191--193
 [][] 
  []
 
-[4 <./trial_and_error_sudoku.png>] [5 <./copy_guess_free_most.png> <./copy_gues
-s_free_prob.png> <./copy_guess_free_prob_num_solution_reached.png>]
+[5 <./copy_guess_free_most.png> <./copy_guess_free_prob.png> <./copy_guess_free
+_prob_num_solution_reached.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 6910) in paragraph at lines 217--218
+[]\OT1/ptm/m/n/10 The lim-i-ta-tion on the net-work's de-gree sug-gested
+ []
+
 <progression.png, id=39, 566.86781pt x 280.04625pt>
 File: progression.png Graphic file (type png)
  <use progression.png>
-Package pdftex.def Info: progression.png used on input line 226.
+Package pdftex.def Info: progression.png used on input line 220.
 (pdftex.def)             Requested size: 255.08815pt x 126.01964pt.
 
-Overfull \hbox (11.1769pt too wide) in paragraph at lines 226--228
+Overfull \hbox (11.1769pt too wide) in paragraph at lines 220--222
 [][] 
  []
 
-(./Article.bbl
+[6 <./progression.png>] (./Article.bbl
 Underfull \hbox (badness 4621) in paragraph at lines 65--69
 []\OT1/ptm/m/n/10 Winter Ma-son and Dun-can J.
  []
 
-) [6 <./progression.png>] (./Article.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [7] (./Article.aux) ) 
 Here is how much of TeX's memory you used:
- 2871 strings out of 493488
- 40107 string characters out of 3144749
- 121816 words of memory out of 3000000
- 6125 multiletter control sequences out of 15000+200000
+ 2870 strings out of 493488
+ 40085 string characters out of 3144749
+ 118816 words of memory out of 3000000
+ 6124 multiletter control sequences out of 15000+200000
  24072 words of font info for 58 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,19n,23p,1548b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
-{c:/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2012/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
-c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive
-/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2012/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/t
-imes/utmbi8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
-c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Article.pdf (6 pages, 277000 bytes).
+ 37i,19n,28p,1548b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
+{c:/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}
+<c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2012/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2012/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/te
+xlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2012/texmf-d
+ist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on Article.pdf (7 pages, 279096 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
