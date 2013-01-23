@@ -3,8 +3,7 @@
 \bibitem[\protect\citeauthoryear{Ahn and Dabbish}{2008}]{vonahm:gwap}
 Luis~Von Ahn and Laura Dabbish.
 \newblock Designing games with a purpose.
-\newblock In {\em Communications of the ACM}, volume~51, pages 58--67, August
-  2008.
+\newblock {\em Communications of the ACM}, 51(8):58--67, August 2008.
 
 \bibitem[\protect\citeauthoryear{Araujo and Lamb}{2008}]{araujo:memenet}
 Ricardo Araujo and Luis Lamb.
@@ -22,16 +21,11 @@ S.~Cook.
 \newblock The complexity of theorem proving procedures.
 \newblock In {\em Proc. 10th ACM conf. on Elec. Comm.}, pages 159--168, 1971.
 
-\bibitem[\protect\citeauthoryear{Cooper}{2011}]{cooper:foldit}
-Seth Cooper.
-\newblock Algorithm discovery by protein folding game players.
-\newblock In {\em National Academy of Sciences}, volume 108, pages 1--5, June
-  2011.
-
-\bibitem[\protect\citeauthoryear{Davis}{2007}]{davis:mathsudoku}
+\bibitem[\protect\citeauthoryear{Davis}{2011}]{davis:mathsudoku}
 Tom Davis.
 \newblock The mathematics of sudoku.
-\newblock November 2007.
+\newblock In {\em Expeditions in Mathematics}. Mathematical Association of
+  America, April 2011.
 
 \bibitem[\protect\citeauthoryear{Dawkins}{1976}]{dawkins:selfishgene}
 Richard Dawkins.
@@ -43,8 +37,7 @@ Richard Dawkins.
 C.~Efferson, R.~Lalive, P.J. Richerson, R.~McElreath, and M.~Lubell.
 \newblock Conformists and mavericks: the empirics of frequency-dependent
   cultural transmission.
-\newblock In {\em Evolution and Human Behaviour}, volume~29, pages 56--64,
-  2008.
+\newblock {\em Evolution and Human Behaviour}, 29:56--64, January 2008.
 
 \bibitem[\protect\citeauthoryear{Farenzena \bgroup \em et al.\egroup
   }{2011}]{farenzena:collabem}
@@ -58,8 +51,15 @@ Daniel Farenzena, Ricardo Araujo, and Luis Lamb.
 \bibitem[\protect\citeauthoryear{Kearns}{2012}]{kearns:experim}
 Michael Kearns.
 \newblock Experiments in social computation.
-\newblock In {\em Communications of the ACM}, volume~55, pages 56--67, June
-  2012.
+\newblock {\em Communications of the ACM}, 55(10):56--67, June 2012.
+
+\bibitem[\protect\citeauthoryear{Khatib \bgroup \em et al.\egroup
+  }{2011}]{cooper:foldit}
+Firas Khatib, Seth Cooper, Michael~D. Tyka, Kefan Xu, Ilya Makedon, Zoran
+  Popovic, David Baker, and Foldit Players.
+\newblock Algorithm discovery by protein folding game players.
+\newblock In {\em Proceedings of the National Academy of Sciences}, volume 108,
+  pages 1--5, June 2011.
 
 \bibitem[\protect\citeauthoryear{Mason and Watts}{2011}]{mason:collablearnet}
 Winter Mason and Duncan~J. Watts.
@@ -75,7 +75,7 @@ M.~Newman.
 \bibitem[\protect\citeauthoryear{Nowak}{2006}]{nowak:evolutioncooperation}
 M.~A. Nowak.
 \newblock Five rules for the evolution of cooperation.
-\newblock In {\em Science}, volume 314, pages 1560--1563, 2006.
+\newblock {\em Science}, 314(5805):1560--1563, December 2006.
 
 \bibitem[\protect\citeauthoryear{Weber}{2005}]{weber:satsudoku}
 T.~Weber.
@@ -85,9 +85,10 @@ T.~Weber.
 
 \bibitem[\protect\citeauthoryear{Woolley \bgroup \em et al.\egroup
   }{2010}]{woolley:evidencecollective}
-A.~W. Woolley, C.~F. Chabris, A.~Pentland, N.~Hashmi, and T.~Malone.
+Anita~Williams Woolley, Christopher~F. Chabris, Alex Pentland, Nada Hashmi, and
+  Thomas~W. Malone.
 \newblock Evidence for a collective intelligence factor in the performance of
   human groups.
-\newblock In {\em Science}, volume 330, pages 686--688, 2010.
+\newblock {\em Science}, 330(6004):686--688, October 2010.
 
 \end{thebibliography}
