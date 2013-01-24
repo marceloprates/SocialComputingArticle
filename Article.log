@@ -1,21 +1,24 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.3)  23 JAN 2013 11:28
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.1.4)  23 JAN 2013 22:30
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **Article.tex
-(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.tex
+(./Article.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
-vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
-an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
-romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
-sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
-senglishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(c:/texlive/2012/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+(c:/texlive/2012/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -29,44 +32,53 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\ijcai13.sty
+) (./ijcai13.sty
 Conference Style, version of 6 September 1995 (revised Nov 2010)
 \titlebox=\skip43
 Named Citation Style, version of 30 November 1994
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+) (c:/texlive/2012/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+(c:/texlive/2012/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
-Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+(c:/texlive/2012/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2008/00/00 v3.10 algorithms environments
 \c@AlgoLine=\count87
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(c:/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+(c:/texlive/2012/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
-Package: relsize 2003/07/04 ver 3.1
+(c:/texlive/2012/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2011/09/21 ver 4.0
 
+Examine \normalsize starts \@setsize size may be 11pt. 
+Examine \small starts \@setsize size may be 10pt. 
+Examine \footnotesize starts \@setsize size may be 10pt. 
+Examine \large starts \@setsize size may be 12pt. 
+Examine \Large starts \@setsize size may be 14pt. 
+Examine \LARGE starts \@setsize size may be 16pt. 
+Examine \scriptsize starts \@setsize size may be 8pt. 
+Examine \tiny starts \@setsize size may be 7pt. 
+Examine \huge starts \@setsize size may be 20pt. 
+Examine \Huge starts \@setsize size may be 23pt. 
 
-Package relsize Warning: Failed to get list of font sizes.
-(relsize)                Falling back to old definition. on input line 81.
+Package relsize Warning: Failed to get list of defined font sizes.
+(relsize)                Size scaling will attempt arbitrary sizes..
 
 )
 ********************************************************
-Package `algorithm2e' Release 5.0 -- january 06 2013 --
+Package `algorithm2e' Release 4.01 -- december 14 2009 --
 - algorithm2e-announce@lirmm.fr mailing list for announcement about releases
 - algorithm2e-discussion@lirmm.fr mailing list for discussion about package
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
-- Author: Christophe Fiorio (cfiorio@um2.fr)
+- Author: Christophe Fiorio (fiorio@lirmm.fr)
 ********************************************************
 \skiptotal=\skip44
 \skiplinenumber=\skip45
@@ -78,7 +90,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \skipalgocfslide=\skip51
 \algowidth=\dimen103
 \inoutsize=\dimen104
-\inoutindent=\dimen105
+\inoutline=\dimen105
 \interspacetitleruled=\dimen106
 \interspacealgoruled=\dimen107
 \interspacetitleboxruled=\dimen108
@@ -86,54 +98,52 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algocf@inputbox=\box27
 \AlCapSkip=\skip52
 \AlCapHSkip=\skip53
-\algoskipindent=\skip54
 \algocf@nlbox=\box28
 \algocf@hangingbox=\box29
-\algocf@untilbox=\box30
-\algocf@skipuntil=\skip55
-\algocf@capbox=\box31
-\algoheightruledefault=\skip56
-\algoheightrule=\skip57
-\algotitleheightruledefault=\skip58
-\algotitleheightrule=\skip59
+\algocf@capbox=\box30
+\algoheightruledefault=\skip54
+\algoheightrule=\skip55
+\algotitleheightruledefault=\skip56
+\algotitleheightrule=\skip57
 \c@algocfline=\count88
 \c@algocfproc=\count89
 \c@algocf=\count90
-\algocf@algoframe=\box32
-\algocf@algobox=\box33
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+\algocf@algoframe=\box31
+\algocf@algobox=\box32
+) (c:/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(c:/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(c:/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(c:/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(c:/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(c:/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count91
 ))
 \Gin@req@height=\dimen109
 \Gin@req@width=\dimen110
-)
-(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.aux)
+) (./Article.aux)
+\openout1 = `Article.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -147,15 +157,14 @@ LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 18.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+ (c:/texlive/2012/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(c:/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count92
 \scratchdimen=\dimen111
-\scratchbox=\box34
+\scratchbox=\box33
 \nofMPsegments=\count93
 \nofMParguments=\count94
 \everyMPshowfont=\toks15
@@ -164,7 +173,54 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \MPnumerator=\count96
 \makeMPintoPDFobject=\count97
 \everyMPtoPDFconversion=\toks16
+) (c:/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
+
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(c:/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(c:/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(c:/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(c:/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -172,7 +228,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 20.
 LaTeX Font Info:    Try loading font information for U+lasy on input line 20.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+
+(c:/texlive/2012/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -191,95 +248,116 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 20.
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 88.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 115.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 115.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+
+(c:/texlive/2012/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 94.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 121.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+
+(c:/texlive/2012/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 94.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 121.
  [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 108.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 137.
  [3]
 
-LaTeX Warning: Citation `?' on page 4 undefined on input line 156.
+LaTeX Warning: Citation `?' on page 4 undefined on input line 187.
 
-<copy_guess_free_most.png, id=23, 416.30531pt x 286.82156pt>
+<copy_guess_free_most.png, id=24, 416.30531pt x 286.82156pt>
 File: copy_guess_free_most.png Graphic file (type png)
 
 <use copy_guess_free_most.png>
-Package pdftex.def Info: copy_guess_free_most.png used on input line 171.
+Package pdftex.def Info: copy_guess_free_most.png used on input line 192.
 (pdftex.def)             Requested size: 249.78511pt x 172.09425pt.
 
-Overfull \hbox (5.87386pt too wide) in paragraph at lines 171--173
+Overfull \hbox (5.87386pt too wide) in paragraph at lines 192--194
 [][] 
  []
 
-<copy_guess_free_prob.png, id=25, 444.91219pt x 266.49562pt>
+<copy_guess_free_prob.png, id=26, 444.91219pt x 266.49562pt>
 File: copy_guess_free_prob.png Graphic file (type png)
 
 <use copy_guess_free_prob.png>
-Package pdftex.def Info: copy_guess_free_prob.png used on input line 178.
+Package pdftex.def Info: copy_guess_free_prob.png used on input line 199.
 (pdftex.def)             Requested size: 266.94936pt x 159.89859pt.
 
-Overfull \hbox (23.0381pt too wide) in paragraph at lines 178--180
+Overfull \hbox (23.0381pt too wide) in paragraph at lines 199--201
 [][] 
  []
 
 
-<copy_guess_free_prob_num_solution_reached.png, id=26, 420.06938pt x 230.36063p
+<copy_guess_free_prob_num_solution_reached.png, id=27, 420.06938pt x 230.36063p
 t>
 File: copy_guess_free_prob_num_solution_reached.png Graphic file (type png)
  <use copy_guess_free_prob_num_solution_reached.png>
 Package pdftex.def Info: copy_guess_free_prob_num_solution_reached.png used on 
-input line 185.
+input line 206.
 (pdftex.def)             Requested size: 252.04358pt x 138.21742pt.
 
-Overfull \hbox (8.13232pt too wide) in paragraph at lines 185--187
+Overfull \hbox (8.13232pt too wide) in paragraph at lines 206--208
 [][] 
  []
 
+[4] <ijcai_sudoku/ring.pdf, id=31, 216.81pt x 144.54pt>
+File: ijcai_sudoku/ring.pdf Graphic file (type pdf)
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<use ijcai_sudoku/ring.pdf>
+Package pdftex.def Info: ijcai_sudoku/ring.pdf used on input line 223.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
+ <ijcai_sudoku/sf.pdf, id=32, 216.81pt x 144.54pt>
+File: ijcai_sudoku/sf.pdf Graphic file (type pdf)
 
- [4]
-[5 <C:/Users/Marcelo/Documents/GitHub/SocialComputingArticle/copy_guess_free_mo
-st.png> <C:/Users/Marcelo/Documents/GitHub/SocialComputingArticle/copy_guess_fr
-ee_prob.png> <C:/Users/Marcelo/Documents/GitHub/SocialComputingArticle/copy_gue
-ss_free_prob_num_solution_reached.png>]
-Underfull \hbox (badness 6910) in paragraph at lines 211--212
+<use ijcai_sudoku/sf.pdf>
+Package pdftex.def Info: ijcai_sudoku/sf.pdf used on input line 229.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
+ <ijcai_sudoku/geral.pdf, id=33, 216.81pt x 144.54pt>
+File: ijcai_sudoku/geral.pdf Graphic file (type pdf)
+
+<use ijcai_sudoku/geral.pdf>
+Package pdftex.def Info: ijcai_sudoku/geral.pdf used on input line 235.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
+ [5 <./copy_guess_free_most.png> <./copy_guess_free_prob.png> <./copy_guess_fre
+e_prob_num_solution_reached.png> <./ijcai_sudoku/ring.pdf>]
+
+LaTeX Warning: Reference `fig:sf_gauss' on page 6 undefined on input line 251.
+
+
+LaTeX Warning: Reference `fig:ring_gauss' on page 6 undefined on input line 251
+.
+
+[6 <./ijcai_sudoku/sf.pdf> <./ijcai_sudoku/geral.pdf
+
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/geral.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `fig:global_gauss' on page 7 undefined on input line 2
+53.
+
+
+Underfull \hbox (badness 6910) in paragraph at lines 271--279
 []\OT1/ptm/m/n/10 The lim-i-ta-tion on the net-work's de-gree sug-gested
  []
 
-<progression.png, id=36, 566.86781pt x 280.04625pt>
-File: progression.png Graphic file (type png)
- <use progression.png>
-Package pdftex.def Info: progression.png used on input line 214.
-(pdftex.def)             Requested size: 255.08815pt x 126.01964pt.
-
-Overfull \hbox (11.1769pt too wide) in paragraph at lines 214--216
-[][] 
- []
-
-(C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.bbl [6 <C:/Us
-ers/Marcelo/Documents/GitHub/SocialComputingArticle/progression.png>]
+(./Article.bbl [7]
 Underfull \hbox (badness 4621) in paragraph at lines 65--69
 []\OT1/ptm/m/n/10 Winter Ma-son and Dun-can J.
  []
@@ -294,35 +372,39 @@ Underfull \hbox (badness 1742) in paragraph at lines 88--93
 \OT1/ptm/m/n/10 pher F. Chabris, Alex Pent-land, Nada Hashmi, and
  []
 
-) [7
+) [8
 
-] (C:\Users\Marcelo\Documents\GitHub\SocialComputingArticle\Article.aux)
+] (./Article.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2749 strings out of 494045
- 38496 string characters out of 3148382
- 119000 words of memory out of 3000000
- 6021 multiletter control sequences out of 15000+200000
+ 2878 strings out of 493488
+ 40204 string characters out of 3144749
+ 121818 words of memory out of 3000000
+ 6131 multiletter control sequences out of 15000+200000
  24072 words of font info for 58 fonts, out of 3000000 for 9000
- 715 hyphenation exceptions out of 8191
- 27i,19n,28p,1548b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Article.pdf (7 pages, 247245 bytes).
+ 957 hyphenation exceptions out of 8191
+ 37i,19n,28p,1396b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
+{c:/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2012/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive
+/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2012/texmf-dist
+/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/t
+imes/utmbi8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Article.pdf (8 pages, 260802 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
