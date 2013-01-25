@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.1.4)  23 JAN 2013 22:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.1.4)  25 JAN 2013 00:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -141,22 +141,26 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen109
 \Gin@req@width=\dimen110
-) (./Article.aux)
+) (./Article.aux
+
+LaTeX Warning: Label `fig:copy_guess_free_most' multiply defined.
+
+)
 \openout1 = `Article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 19.
  (c:/texlive/2012/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -222,32 +226,24 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 20.
+(Font)              <12> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 20.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 20.
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 21.
 
 (c:/texlive/2012/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 20.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 20.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
 
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 20.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 20.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -256,108 +252,109 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 115.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 115.
+Underfull \hbox (badness 1127) in paragraph at lines 81--82
+\OT1/ptm/m/n/10 We have de-vel-oped a novel method for ar-ti-fi-cial so-cial
+ []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 96.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 96.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 132.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 132.
 
 (c:/texlive/2012/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 121.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 138.
 
 
 (c:/texlive/2012/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 121.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
  [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 137.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 155.
  [3]
 
-LaTeX Warning: Citation `?' on page 4 undefined on input line 187.
+LaTeX Warning: Citation `?' on page 4 undefined on input line 212.
 
-<copy_guess_free_most.png, id=24, 416.30531pt x 286.82156pt>
-File: copy_guess_free_most.png Graphic file (type png)
+[4] <ijcai_sudoku/fill_iter.pdf, id=26, 216.81pt x 144.54pt>
+File: ijcai_sudoku/fill_iter.pdf Graphic file (type pdf)
 
-<use copy_guess_free_most.png>
-Package pdftex.def Info: copy_guess_free_most.png used on input line 192.
-(pdftex.def)             Requested size: 249.78511pt x 172.09425pt.
+<use ijcai_sudoku/fill_iter.pdf>
+Package pdftex.def Info: ijcai_sudoku/fill_iter.pdf used on input line 217.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
 
-Overfull \hbox (5.87386pt too wide) in paragraph at lines 192--194
-[][] 
- []
+<ijcai_sudoku/fill_suc.pdf, id=27, 216.81pt x 144.54pt>
+File: ijcai_sudoku/fill_suc.pdf Graphic file (type pdf)
 
-<copy_guess_free_prob.png, id=26, 444.91219pt x 266.49562pt>
-File: copy_guess_free_prob.png Graphic file (type png)
+<use ijcai_sudoku/fill_suc.pdf>
+Package pdftex.def Info: ijcai_sudoku/fill_suc.pdf used on input line 224.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
 
-<use copy_guess_free_prob.png>
-Package pdftex.def Info: copy_guess_free_prob.png used on input line 199.
-(pdftex.def)             Requested size: 266.94936pt x 159.89859pt.
+<ijcai_sudoku/first_iter.pdf, id=28, 216.81pt x 144.54pt>
+File: ijcai_sudoku/first_iter.pdf Graphic file (type pdf)
 
-Overfull \hbox (23.0381pt too wide) in paragraph at lines 199--201
-[][] 
- []
+<use ijcai_sudoku/first_iter.pdf>
+Package pdftex.def Info: ijcai_sudoku/first_iter.pdf used on input line 231.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
 
+<ijcai_sudoku/first_suc.pdf, id=29, 216.81pt x 144.54pt>
+File: ijcai_sudoku/first_suc.pdf Graphic file (type pdf)
 
-<copy_guess_free_prob_num_solution_reached.png, id=27, 420.06938pt x 230.36063p
-t>
-File: copy_guess_free_prob_num_solution_reached.png Graphic file (type png)
- <use copy_guess_free_prob_num_solution_reached.png>
-Package pdftex.def Info: copy_guess_free_prob_num_solution_reached.png used on 
-input line 206.
-(pdftex.def)             Requested size: 252.04358pt x 138.21742pt.
+<use ijcai_sudoku/first_suc.pdf>
+Package pdftex.def Info: ijcai_sudoku/first_suc.pdf used on input line 238.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
+ [5 <./ijcai_sudoku/fill_iter.pdf> <./ijcai_sudoku/fill_suc.pdf
 
-Overfull \hbox (8.13232pt too wide) in paragraph at lines 206--208
-[][] 
- []
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/fill_suc.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+> <./ijcai_sudoku/first_iter.pdf
 
-[4] <ijcai_sudoku/ring.pdf, id=31, 216.81pt x 144.54pt>
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/first_iter.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./ijcai_sudoku/first_suc.pdf
+
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/first_suc.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>] <ijcai_sudoku/ring.pdf, id=62, 216.81pt x 144.54pt>
 File: ijcai_sudoku/ring.pdf Graphic file (type pdf)
 
 <use ijcai_sudoku/ring.pdf>
-Package pdftex.def Info: ijcai_sudoku/ring.pdf used on input line 223.
+Package pdftex.def Info: ijcai_sudoku/ring.pdf used on input line 255.
 (pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
- <ijcai_sudoku/sf.pdf, id=32, 216.81pt x 144.54pt>
+ <ijcai_sudoku/sf.pdf, id=63, 216.81pt x 144.54pt>
 File: ijcai_sudoku/sf.pdf Graphic file (type pdf)
 
 <use ijcai_sudoku/sf.pdf>
-Package pdftex.def Info: ijcai_sudoku/sf.pdf used on input line 229.
+Package pdftex.def Info: ijcai_sudoku/sf.pdf used on input line 261.
 (pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
- <ijcai_sudoku/geral.pdf, id=33, 216.81pt x 144.54pt>
+ <ijcai_sudoku/geral.pdf, id=64, 216.81pt x 144.54pt>
 File: ijcai_sudoku/geral.pdf Graphic file (type pdf)
 
 <use ijcai_sudoku/geral.pdf>
-Package pdftex.def Info: ijcai_sudoku/geral.pdf used on input line 235.
+Package pdftex.def Info: ijcai_sudoku/geral.pdf used on input line 267.
 (pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
- [5 <./copy_guess_free_most.png> <./copy_guess_free_prob.png> <./copy_guess_fre
-e_prob_num_solution_reached.png> <./ijcai_sudoku/ring.pdf>]
+ [6 <./ijcai_sudoku/ring.pdf> <./ijcai_sudoku/sf.pdf
 
-LaTeX Warning: Reference `fig:sf_gauss' on page 6 undefined on input line 251.
-
-
-LaTeX Warning: Reference `fig:ring_gauss' on page 6 undefined on input line 251
-.
-
-[6 <./ijcai_sudoku/sf.pdf> <./ijcai_sudoku/geral.pdf
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/sf.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./ijcai_sudoku/geral.pdf
 
 pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/geral.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
->]
-
-LaTeX Warning: Reference `fig:global_gauss' on page 7 undefined on input line 2
-53.
-
-
-Underfull \hbox (badness 6910) in paragraph at lines 271--279
+>] [7]
+Underfull \hbox (badness 6910) in paragraph at lines 303--311
 []\OT1/ptm/m/n/10 The lim-i-ta-tion on the net-work's de-gree sug-gested
  []
 
-(./Article.bbl [7]
+(./Article.bbl
 Underfull \hbox (badness 4621) in paragraph at lines 65--69
 []\OT1/ptm/m/n/10 Winter Ma-son and Dun-can J.
  []
@@ -372,22 +369,17 @@ Underfull \hbox (badness 1742) in paragraph at lines 88--93
 \OT1/ptm/m/n/10 pher F. Chabris, Alex Pent-land, Nada Hashmi, and
  []
 
-) [8
+) [8] (./Article.aux)
 
-] (./Article.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2878 strings out of 493488
- 40204 string characters out of 3144749
- 121818 words of memory out of 3000000
- 6131 multiletter control sequences out of 15000+200000
- 24072 words of font info for 58 fonts, out of 3000000 for 9000
+ 2869 strings out of 493488
+ 40057 string characters out of 3144749
+ 121935 words of memory out of 3000000
+ 6126 multiletter control sequences out of 15000+200000
+ 20450 words of font info for 48 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,19n,28p,1396b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
 {c:/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2012/texm
@@ -395,16 +387,15 @@ f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
-c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive
-/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2012/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/t
-imes/utmbi8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
-c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Article.pdf (8 pages, 260802 bytes).
+sy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
+c:/texlive/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2012/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2012/texmf-dist/fonts/t
+ype1/urw/times/utmbi8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Article.pdf (8 pages, 384660 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 143 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
