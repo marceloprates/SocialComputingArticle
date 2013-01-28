@@ -1,5 +1,48 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: Article.aux
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Article.aux
 The style file: named.bst
 Database file #1: Article.bib
 Warning--I didn't find a database entry for "?"
+You've used 15 entries,
+            2439 wiz_defined-function locations,
+            641 strings with 6526 characters,
+and the built_in function-call counts, 6080 in all, are:
+= -- 600
+> -- 212
+< -- 9
++ -- 74
+- -- 70
+* -- 468
+:= -- 944
+add.period$ -- 46
+call.type$ -- 15
+change.case$ -- 92
+chr.to.int$ -- 15
+cite$ -- 15
+duplicate$ -- 279
+empty$ -- 501
+format.name$ -- 88
+if$ -- 1308
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 18
+newline$ -- 78
+num.names$ -- 45
+pop$ -- 101
+preamble$ -- 1
+purify$ -- 110
+quote$ -- 0
+skip$ -- 229
+stack$ -- 0
+substring$ -- 300
+swap$ -- 83
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 108
+warning$ -- 0
+while$ -- 47
+width$ -- 17
+write$ -- 197
 (There was 1 warning)

@@ -1,0 +1,94 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Ahn and Dabbish}{2008}]{vonahm:gwap}
+Luis~Von Ahn and Laura Dabbish.
+\newblock Designing games with a purpose.
+\newblock {\em Communications of the ACM}, 51(8):58--67, August 2008.
+
+\bibitem[\protect\citeauthoryear{Araujo and Lamb}{2008}]{araujo:memenet}
+Ricardo Araujo and Luis Lamb.
+\newblock Memetic networks: analyzing the effects of network properties in
+  multi-agent performance.
+\newblock In {\em AAAI'08}, pages 3--8, 2008.
+
+\bibitem[\protect\citeauthoryear{Barabasi}{2002}]{barabasi:linked}
+A.~Barabasi.
+\newblock {\em Linked: The New Science of Networks}.
+\newblock Basic Books, 2002.
+
+\bibitem[\protect\citeauthoryear{Cook}{1971}]{cook:complexitytheoremproving}
+S.~Cook.
+\newblock The complexity of theorem proving procedures.
+\newblock In {\em Proc. 10th ACM conf. on Elec. Comm.}, pages 159--168, 1971.
+
+\bibitem[\protect\citeauthoryear{Davis}{2011}]{davis:mathsudoku}
+Tom Davis.
+\newblock The mathematics of sudoku.
+\newblock In {\em Expeditions in Mathematics}. Mathematical Association of
+  America, April 2011.
+
+\bibitem[\protect\citeauthoryear{Dawkins}{1976}]{dawkins:selfishgene}
+Richard Dawkins.
+\newblock {\em The Selfish Gene}, volume~32.
+\newblock Oxford University Press, 1976.
+
+\bibitem[\protect\citeauthoryear{Efferson \bgroup \em et al.\egroup
+  }{2008}]{cefferson:conformists}
+C.~Efferson, R.~Lalive, P.J. Richerson, R.~McElreath, and M.~Lubell.
+\newblock Conformists and mavericks: the empirics of frequency-dependent
+  cultural transmission.
+\newblock {\em Evolution and Human Behaviour}, 29:56--64, January 2008.
+
+\bibitem[\protect\citeauthoryear{Farenzena \bgroup \em et al.\egroup
+  }{2011}]{farenzena:collabem}
+Daniel Farenzena, Ricardo Araujo, and Luis Lamb.
+\newblock Collaboration emergence in social networks with informational natural
+  selection.
+\newblock In {\em 2011 IEEE Third Intl Conference on Privacy Security Risk and
+  Trust and 2011 IEEE Third Intl Conference on Social Computing}, pages
+  555--559, 2011.
+
+\bibitem[\protect\citeauthoryear{Kearns}{2012}]{kearns:experim}
+Michael Kearns.
+\newblock Experiments in social computation.
+\newblock {\em Communications of the ACM}, 55(10):56--67, June 2012.
+
+\bibitem[\protect\citeauthoryear{Khatib \bgroup \em et al.\egroup
+  }{2011}]{cooper:foldit}
+Firas Khatib, Seth Cooper, Michael~D. Tyka, Kefan Xu, Ilya Makedon, Zoran
+  Popovic, David Baker, and Foldit Players.
+\newblock Algorithm discovery by protein folding game players.
+\newblock In {\em Proceedings of the National Academy of Sciences}, volume 108,
+  pages 1--5, June 2011.
+
+\bibitem[\protect\citeauthoryear{Mason and Watts}{2011}]{mason:collablearnet}
+Winter Mason and Duncan~J. Watts.
+\newblock Collaborative learning in networks.
+\newblock In {\em Proceedings of the National Academy of Sciences}, volume
+  2011, pages 764--769, November 2011.
+
+\bibitem[\protect\citeauthoryear{Newman}{2010}]{newman:newtorks}
+M.~Newman.
+\newblock {\em Networks: An Introduction}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem[\protect\citeauthoryear{Nowak}{2006}]{nowak:evolutioncooperation}
+M.~A. Nowak.
+\newblock Five rules for the evolution of cooperation.
+\newblock {\em Science}, 314(5805):1560--1563, December 2006.
+
+\bibitem[\protect\citeauthoryear{Weber}{2005}]{weber:satsudoku}
+T.~Weber.
+\newblock A sat-based sudoku solver.
+\newblock In {\em 12th Int. Conf. Logic for Prog., Art. Int., and Reas.}, pages
+  11--15, 2005.
+
+\bibitem[\protect\citeauthoryear{Woolley \bgroup \em et al.\egroup
+  }{2010}]{woolley:evidencecollective}
+Anita~Williams Woolley, Christopher~F. Chabris, Alex Pentland, Nada Hashmi, and
+  Thomas~W. Malone.
+\newblock Evidence for a collective intelligence factor in the performance of
+  human groups.
+\newblock {\em Science}, 330(6004):686--688, October 2010.
+
+\end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.1.4)  28 JAN 2013 20:16
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.1.4)  28 JAN 2013 01:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -36,13 +36,15 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 Conference Style, version of 6 September 1995 (revised Nov 2010)
 \titlebox=\skip43
 Named Citation Style, version of 30 November 1994
-) (c:/texlive/2012/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
-
-(c:/texlive/2012/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
-))
+) (c:/texlive/2012/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(c:/texlive/2012/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
 (c:/texlive/2012/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2008/00/00 v3.10 algorithms environments
 \c@AlgoLine=\count87
@@ -108,36 +110,13 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count90
 \algocf@algoframe=\box31
 \algocf@algobox=\box32
-) (c:/texlive/2012/texmf-dist/tex/latex/psnfss/times.sty
-Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-)
-(c:/texlive/2012/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2012/02/19 v3.2f Customizing captions (AR)
-
-(c:/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+) (c:/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (c:/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-\captionmargin=\dimen109
-\captionmargin@=\dimen110
-\captionwidth=\dimen111
-\caption@indent=\dimen112
-\caption@parindent=\dimen113
-\caption@hangindent=\dimen114
-)
-\c@ContinuedFloat=\count91
-)
-(c:/texlive/2012/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
-\c@subfigure=\count92
-\c@subtable=\count93
-)
-(c:/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-
 (c:/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -158,51 +137,41 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (c:/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count94
+\Gread@gobject=\count91
 ))
-\Gin@req@height=\dimen115
-\Gin@req@width=\dimen116
-) (./Article.aux
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-)
+\Gin@req@height=\dimen109
+\Gin@req@width=\dimen110
+) (./Article.aux)
 \openout1 = `Article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 23.
- (c:/texlive/2012/texmf-dist/tex/latex/psnfss/t1ptm.fd
-File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 19.
+ (c:/texlive/2012/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
-
 (c:/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count95
-\scratchdimen=\dimen117
+\scratchcounter=\count92
+\scratchdimen=\dimen111
 \scratchbox=\box33
-\nofMPsegments=\count96
-\nofMParguments=\count97
+\nofMPsegments=\count93
+\nofMParguments=\count94
 \everyMPshowfont=\toks15
-\MPscratchCnt=\count98
-\MPscratchDim=\dimen118
-\MPnumerator=\count99
-\makeMPintoPDFobject=\count100
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen112
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
 \everyMPtoPDFconversion=\toks16
 ) (c:/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -252,171 +221,169 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 25.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 25.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 25.
- [1{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(Font)              <6> on input line 21.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 21.
+
+(c:/texlive/2012/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
+
+
+LaTeX Warning: No \author given.
+
+[1{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 95.
+(Font)              <7> on input line 102.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 95.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 131.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 131.
+(Font)              <5> on input line 102.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 138.
 
-(c:/texlive/2012/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+
+(c:/texlive/2012/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 144.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 137.
 
 (c:/texlive/2012/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 137.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 144.
  [2]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 148.
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 154.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 155.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 161.
  [3]
-Underfull \hbox (badness 2837) in paragraph at lines 193--194
-\T1/ptm/m/n/10 We mod-elled our agent net-works us-ing four dif-fer-ent
- []
+<ijcai_sudoku/ring.pdf, id=23, 216.81pt x 144.54pt>
+File: ijcai_sudoku/ring.pdf Graphic file (type pdf)
 
-<./figs/ring.pdf, id=23, 216.81pt x 144.54pt>
-File: ./figs/ring.pdf Graphic file (type pdf)
- <use ./figs/ring.pdf>
-Package pdftex.def Info: ./figs/ring.pdf used on input line 204.
+<use ijcai_sudoku/ring.pdf>
+Package pdftex.def Info: ijcai_sudoku/ring.pdf used on input line 209.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
+ <ijcai_sudoku/sf.pdf, id=24, 216.81pt x 144.54pt>
+File: ijcai_sudoku/sf.pdf Graphic file (type pdf)
+
+<use ijcai_sudoku/sf.pdf>
+Package pdftex.def Info: ijcai_sudoku/sf.pdf used on input line 215.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
+ <ijcai_sudoku/geral.pdf, id=25, 216.81pt x 144.54pt>
+File: ijcai_sudoku/geral.pdf Graphic file (type pdf)
+
+<use ijcai_sudoku/geral.pdf>
+Package pdftex.def Info: ijcai_sudoku/geral.pdf used on input line 221.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
+ [4] [5 <./ijcai_sudoku/ring.pdf> <./ijcai_sudoku/sf.pdf
+
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/sf.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./ijcai_sudoku/geral.pdf
+
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/geral.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>] <ijcai_sudoku/fill_iter.pdf, id=63, 216.81pt x 144.54pt>
+File: ijcai_sudoku/fill_iter.pdf Graphic file (type pdf)
+
+<use ijcai_sudoku/fill_iter.pdf>
+Package pdftex.def Info: ijcai_sudoku/fill_iter.pdf used on input line 242.
 (pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
 
-<./figs/sf.pdf, id=24, 216.81pt x 144.54pt>
-File: ./figs/sf.pdf Graphic file (type pdf)
- <use ./figs/sf.pdf>
-Package pdftex.def Info: ./figs/sf.pdf used on input line 211.
+<ijcai_sudoku/fill_suc.pdf, id=64, 216.81pt x 144.54pt>
+File: ijcai_sudoku/fill_suc.pdf Graphic file (type pdf)
+
+<use ijcai_sudoku/fill_suc.pdf>
+Package pdftex.def Info: ijcai_sudoku/fill_suc.pdf used on input line 249.
 (pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
 
-<./figs/geral.pdf, id=25, 216.81pt x 144.54pt>
-File: ./figs/geral.pdf Graphic file (type pdf)
- <use ./figs/geral.pdf>
-Package pdftex.def Info: ./figs/geral.pdf used on input line 218.
+<ijcai_sudoku/first_iter.pdf, id=65, 216.81pt x 144.54pt>
+File: ijcai_sudoku/first_iter.pdf Graphic file (type pdf)
+
+<use ijcai_sudoku/first_iter.pdf>
+Package pdftex.def Info: ijcai_sudoku/first_iter.pdf used on input line 256.
 (pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
 
+<ijcai_sudoku/first_suc.pdf, id=66, 216.81pt x 144.54pt>
+File: ijcai_sudoku/first_suc.pdf Graphic file (type pdf)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use ijcai_sudoku/first_suc.pdf>
+Package pdftex.def Info: ijcai_sudoku/first_suc.pdf used on input line 263.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
 
-
-LaTeX Warning: Citation `dagostino:test' on page 4 undefined on input line 234.
-
-
-[4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [6 <./ijcai_sudoku/fill_iter.pdf> <./ijcai_sudoku/fill_suc.pdf
 
-<./figs/fill_iter.pdf, id=29, 216.81pt x 144.54pt>
-File: ./figs/fill_iter.pdf Graphic file (type pdf)
- <use ./figs/fill_iter.pdf>
-Package pdftex.def Info: ./figs/fill_iter.pdf used on input line 242.
-(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/fill_suc.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+> <./ijcai_sudoku/first_iter.pdf
 
-<./figs/first_iter.pdf, id=30, 216.81pt x 144.54pt>
-File: ./figs/first_iter.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/first_iter.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./ijcai_sudoku/first_suc.pdf
 
-<use ./figs/first_iter.pdf>
-Package pdftex.def Info: ./figs/first_iter.pdf used on input line 247.
-(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
- <./figs/fill_suc.pdf, id=31, 216.81pt x 144.54pt>
-File: ./figs/fill_suc.pdf Graphic file (type pdf)
-
-<use ./figs/fill_suc.pdf>
-Package pdftex.def Info: ./figs/fill_suc.pdf used on input line 255.
-(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
- <./figs/first_suc.pdf, id=32, 216.81pt x 144.54pt>
-File: ./figs/first_suc.pdf Graphic file (type pdf)
-
-<use ./figs/first_suc.pdf>
-Package pdftex.def Info: ./figs/first_suc.pdf used on input line 260.
-(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
- [5 <./figs/ring.pdf> <./figs/sf.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figs/sf.pdf): PDF inclusion: multiple pdfs
- with page group included in a single page
-> <./figs/geral.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figs/geral.pdf): PDF inclusion: multiple p
-dfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./ijcai_sudoku/first_suc.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
 >]
 
-LaTeX Warning: Citation `?' on page 6 undefined on input line 285.
+LaTeX Warning: Citation `?' on page 7 undefined on input line 286.
 
-[6 <./figs/fill_iter.pdf> <./figs/first_iter.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figs/first_iter.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
-> <./figs/fill_suc.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figs/fill_suc.pdf): PDF inclusion: multipl
-e pdfs with page group included in a single page
-> <./figs/first_suc.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figs/first_suc.pdf): PDF inclusion: multip
-le pdfs with page group included in a single page
->] [7] (./Article.bbl
+[7] (./Article.bbl [8]
 Underfull \hbox (badness 4621) in paragraph at lines 65--69
-[]\T1/ptm/m/n/10 Winter Ma-son and Dun-can J.
+[]\OT1/ptm/m/n/10 Winter Ma-son and Dun-can J.
  []
 
 
 Underfull \hbox (badness 4353) in paragraph at lines 88--93
-[]\T1/ptm/m/n/10 Anita Williams Wool-ley, Christo-
+[]\OT1/ptm/m/n/10 Anita Williams Wool-ley, Christo-
  []
 
 
 Underfull \hbox (badness 1742) in paragraph at lines 88--93
-\T1/ptm/m/n/10 pher F. Chabris, Alex Pent-land, Nada Hashmi, and
+\OT1/ptm/m/n/10 pher F. Chabris, Alex Pent-land, Nada Hashmi, and
  []
 
-) [8] (./Article.aux)
+) [9
 
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (./Article.aux) ) 
 Here is how much of TeX's memory you used:
- 4124 strings out of 493488
- 60036 string characters out of 3144749
- 136200 words of memory out of 3000000
- 7377 multiletter control sequences out of 15000+200000
- 34964 words of font info for 45 fonts, out of 3000000 for 9000
+ 2871 strings out of 493488
+ 40031 string characters out of 3144749
+ 122912 words of memory out of 3000000
+ 6128 multiletter control sequences out of 15000+200000
+ 20450 words of font info for 48 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,19n,38p,1547b,414s stack positions out of 5000i,500n,10000p,200000b,50000s
-{c:/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2012/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
-c:/texlive/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2012/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2012/texmf-dist/fonts/t
-ype1/urw/times/utmbi8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/times/ut
-mr8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Article.pdf (8 pages, 439944 bytes).
+ 37i,19n,28p,1547b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
+{c:/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2012/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2012/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+<c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2012/t
+exmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2012/texmf-dist/fonts/t
+ype1/urw/times/utmr8a.pfb><c:/texlive/2012/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on Article.pdf (9 pages, 385360 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 146 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

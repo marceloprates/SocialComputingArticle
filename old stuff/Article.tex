@@ -1,24 +1,20 @@
 \documentclass{article}
 \usepackage{ijcai13}
-
-\usepackage[T1]{fontenc}
-%\usepackage{latexsym} 
-\usepackage[ruled,vlined]{algorithm2e}
 \usepackage{times}
-%\usepackage{mdwmath}
-%\usepackage{mdwtab}
-%\usepackage{booktabs}
-\usepackage{caption}
-\usepackage{subcaption}
+\usepackage{latexsym} 
+
+%\documentclass[letterpaper]{article}
+%\usepackage{aaai}
+%\usepackage{times}
+%\usepackage{helvet}
+%\usepackage{courier}
+\usepackage{algorithm2e}
+%\frenchspacing
 
 \usepackage{graphicx}
 
-\graphicspath{{./figs/}}
-
-%os keywords devem ir no lugar dos autores
-\author{Multidisciplinary Topics And Applications; Agent-based and Multi-agent Systems}
-
-\title{Leveraging Collaboration: A Methodology for the Design of Social Problem-Solving Systems}
+\title{Leveraging Collaboration: 
+A Methodology for the Design of Social Problem-Solving Systems}
 
 \begin{document}
 
@@ -26,15 +22,26 @@
 
 \begin{abstract}
 Social collaboration has been shown to facilitate problem-solving activity in diverse sets of environments. 
-Nevertheless, if not well designed, social and human computation systems may achieve results only similar to those of a single human subject performing a task. 
-This scenario reflects a need for better understanding of the performance issues of human problem-solving social networks. 
+Nevertheless, if not well designed, social and human computation systems may achieve results 
+only similar to those of a single human subject performing a task. 
+This scenario reflects a need for better understanding of the performance 
+issues of human problem-solving social networks. 
 Firstly, we propose a model for simulating social problem-solving. 
-We then carry out several simulations with artificial agents supported by results of experiments carried out with human subjects, 
+We then carry out several simulations with artificial agents  
+supported by results of experiments carried out with human subjects, 
 in order to analyse which parameters influence the performance of collaborative problem-solving social networks. 
-We analyse the strategies humans follow when solving a problem, comparing them with alternative ones, and identify the consequences of the employed strategies in the collective performance of the social network. 
-Our results also indicate that copying and guessing are beneficial to the performance of the social networks. 
-We then propose mechanisms that can improve collaborative problem-solving.
-Finally, we show that our results lead to a methodology for the design of efficient problem-solving systems that can be applied to several kinds of collaborative social systems. 
+We analyse the strategies humans follow when solving a problem, 
+comparing them with alternative ones, and 
+identify the consequences of the employed strategies 
+in the collective performance of the social network. 
+Our results also indicate that copying and guessing are beneficial to the 
+performance of the social networks. 
+We then propose mechanisms that can improve 
+collaborative problem-solving.
+Finally, we show that our results lead to a methodology for the design  
+of efficient problem-solving systems that can be applied 
+to several kinds of collaborative social systems. 
+
 \end{abstract}
 
 \section{Introduction}
@@ -94,7 +101,7 @@ A number of multi-agent methodologies that employ information flow through agent
 
 We propose a method for solving computational problems by means of a network of agents endowed with social behaviour. Our algorithm is composed of an ordered set of $N$ agents, each encoding a partial solution to the problem, and a binary $N \times N$ matrix representing possible connections between agents. Additionally, our algorithm is composed of two stages, namely the {\em communication phase} and the {\em reasoning phase}.
 
-\begin{algorithm}[h]
+\begin{algorithm}
  \SetAlgoLined
  Initialize N agents, each encoding a partial solution to the problem\;
  \While{termination condition not met}
@@ -117,7 +124,7 @@ We propose a method for solving computational problems by means of a network of 
  		$A_{i}$ = $i_{th}$ agent\;
  		selectedMessage = select($A_{i}$.messages)\;
  		
- 		\If{random(0.0, 1.0) $<$ copyRate}
+ 		\If{random(0,1) $<$ copyRate}
  		{
  			$A_{i}$.solution = selectedMessage\;
  		}
@@ -186,11 +193,11 @@ We have consistent evidence that trial-and-error is a part of the Sudoku solving
 
 In our modelling, we associate each agent with a numerical parameter determining the probability this agent has to guess when incapable of applying a typical Sudoku solving strategy. We call this parameter the \emph{guess rate}.
 
-Automatic Sudoku solvers employing a backtracking algorithm are easily programmed and very time-efficient. On the other hand, the space complexity of these algorithms is a barrier to most human solvers, who need to write down tons of observations in order to employ a backtracking strategy. With this in mind, we propose in our modelling a different kind of backtracking, intended to be more similar to the way human beings employ error correction in Sudoku solving in a collaborative environment such as the one analysed in~\cite{farenzena:collabem}, which we refer to as \emph{social backtracking}. In it, when faced with one or more conflicts in its own solution, an agent copies a solution from one of its neighbours. In our modelling, this is done by raising the copy rate of this particular agent to $1.0$.
+Automatic Sudoku solvers employing a backtracking algorithm are easily programmed and very time-efficient. On the other hand, the space complexity of these algorithms is a barrier to most human solvers, who need to write down tons of observations in order to employ a backtracking strategy. With this in mind, we propose in our modelling a different kind of backtracking, intended to be more similar to the way human beings employ error correction in Sudoku solving in a collaborative environment such as the one analysed in~\cite{farenzena:collabem}, which we refer to as \emph{social backtracking}. In it, when faced with one or more conflicts in its own solution, an agent copies a solution from one of its neighbours. In our modelling, this is done by raising the copy rate of this particular agent to $100 \%$.
 
 \subsection{Network Topology}
 
-We modelled our agent networks using four different topologies: a {\em fully connected} topology, a {\em scale-free} topology~\cite{barabasi:linked}, a {\em 2-Ring} topology and a {\em 3-Ring} topology~\cite{newman:newtorks}.
+We modelled our agent networks through the network topologies employed by~\cite{farenzena:collabem} in their tests with human social networks. The topologies used were the {\em fully connected} topology, the {\em scale-free} topology~\cite{barabasi:linked}, the {\em 2-Ring} topology and the {\em 3-Ring} topology~\cite{newman:newtorks}.
 
 \section{Experiments and Results}
 \label{sec:results}
@@ -198,30 +205,25 @@ We modelled our agent networks using four different topologies: a {\em fully con
 We tested the simulated Sudoku environment using an heterogeneous, uniform agent distribution in which every agent level (0 to 5) %explain; table?
 had an equal representation in the population. We performed experiments with varying message selecting strategies, network topologies and values for the parameters of copy rate and guess rate.
 
-\begin{figure}[h!]
-    \begin{subfigure}[c]{1.0\columnwidth}
-        \centering
-        \includegraphics{ring}
-        \caption{} \label{fig:ring_gauss}
-    \end{subfigure}
-    %\hfill{}
-    
-    \begin{subfigure}[c]{1.0\columnwidth}
-        \centering
-        \includegraphics{sf}
-        \caption{} \label{fig:sf_gauss}
-    \end{subfigure}
-    %\hfill{}
-    
-    \begin{subfigure}[c]{1.0\columnwidth}
-        \centering
-        \includegraphics{geral}
-        \caption{} \label{fig:global_gauss}
-    \end{subfigure}
-    \caption{Graphs representing average results for (a) 3-ring; (b) scale-free; and (c) for all topologies and instances. The graphs show the proportion of agents obtaining the correct solution on each round for both the \emph{Most Filled} and \emph{First Positions} strategies. The lines for both strategies can be fitted to normal distributions with different values for mean and variance.}\label{}
+\begin{figure}
+\includegraphics[scale=1]{ijcai_sudoku/ring}
+\caption{The graph presents the average results for the 3-ring topology, showing the proportion of agents to obtain the correct solution on each round for both the \emph{Most Filled} and \emph{First Positions} strategies. The lines for both strategies can be fitted to normal distributions with different values for mean and variance.}
+\label{fig:ring_gauss}
 \end{figure}
 
-\subsection{Comparing Copying Strategies}
+\begin{figure}
+\includegraphics[scale=1]{ijcai_sudoku/sf}
+\caption{The graph presents the average results for the scale-free topology, showing the proportion of agents to obtain the correct solution on each round for both the \emph{Most Filled} and \emph{First Positions} strategies. The lines for both strategies can be fitted to normal distributions with different values for mean and variance.}
+\label{fig:sf_gauss}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=1]{ijcai_sudoku/geral}
+\caption{The graph presents the average results for all topologies and instances, showing the proportion of agents to obtain the correct solution on each round for both the \emph{Most Filled} and \emph{First Positions} strategies. The lines for both strategies can be fitted to normal distributions with different values for mean and variance.}
+\label{fig:global_gauss}
+\end{figure}
+
+\subsection{Comparison of Copying Strategies}
 
 %--Descrever experimentos
 We have run experiments with four different topologies, previously enumerated in section~\ref{sec:setup}, for seven different problem instances, and obtained similar results in each. We used fixed values of copy rate and guess rate in all runs. Each experiment ran for 100 rounds composed of a communication phase and a reasoning phase. For each combination of topology and instance we ran once using the \emph{Most Filled} strategy and again using the \emph{First Positions} strategy, with the goal of comparing their performance. Our hypothesis was that the \emph{Most Filled} strategy would perform better, a result which would confirm our belief that problem-solving social networks respond positively to the employment of evaluation functions.
@@ -231,54 +233,53 @@ We have observed in our experiments that the progress of the solution, represent
 The number of agents with complete solutions increases in the following rounds, until it reaches a point where the few remaining agents take longer to obtain the solution due to factors such as being less skilled solvers or being in unfavourable positions in the topology.
 
 The solution progress for the \emph{Most Filled} and \emph{First Positions} strategies can be described as normal distributions of different mean and variance. In the experiments, the mean indicates how soon the correct solution was found, and the variance how long the final solution took to spread throughout the network. The exact values for those parameters vary according to factors such as topology and problem instance, but they follow a particular pattern: in all cases, the \emph{Most Filled} strategy has lower mean - indicating the solution is found sooner - and lower variance - meaning it spreads faster. 
-We have chosen the scale-free and 3-ring topologies as representative examples, and plotted the average of the results for the same instance of the problem for each topology in Fig.~\ref{fig:ring_gauss} and~\ref{fig:sf_gauss}, respectively. Each graph shows the average of the percentage of agents that find the correct solution in each round for the two strategies, with normal curves plotted over the values evidencing the behaviour described above. The curves were tested for normality using \emph{D'Agostino's Omnibus $K^2$ Test}~\cite{dagostino:test}, obtaining for the \emph{Most Filled} strategy $(K^2=7.12, \chi^2=0.03)$ in the 3-ring topology and $(K^2=5.58, \chi^2=0.06)$ in the scale-free topology, and for the \emph{First Positions} strategy $(K^2=2.62, \chi^2=0.27)$ in the 3-ring topology and $(K^2=1.67, \chi^2=0.43)$ in the scale-free topology. One notes that the results fluctuate more for the second strategy, which is explained by its nearly random method of choosing solutions to copy.
+We have chosen the scale-free and 3-ring topologies as representative examples, and plotted the average of the results for the same instance of the problem for each topology in Fig.~\ref{fig:ring_gauss} and~\ref{fig:sf_gauss}, respectively. Each graph shows the average of the percentage of agents that find the correct solution in each round for the two strategies, with normal curves plotted over the values evidencing the behaviour described above. One notes that the results fluctuate more for the second strategy, which is explained by its nearly random method of choosing solutions to copy.
 
 Fig.~\ref{fig:global_gauss} depicts the average for all experiments, encompassing every topology and instance. In this graph, the presence of the normal behaviour in the distribution is less clear, because it combines several different instances and topologies. Nevertheless, its effects can still be seen. The \emph{Most Filled} strategy displays different residual peaks from particular instances, while the line for the \emph{First Positions} strategy starts flattening with the accumulation of several distributions from the individual experiments. More importantly, 
 Fig.~\ref{fig:global_gauss} shows that the results of Fig.~\ref{fig:ring_gauss} and~\ref{fig:sf_gauss} can be generalized: in average, for every topology and instance, the network converged to the correct solution between rounds 44 and 60 with the \emph{Most Filled} strategy, and between rounds 54 and 94 with the \emph{First Positions} strategy, showing that for the \emph{Most Filled} strategy the solution is found earlier and spreads faster.
 
+\begin{figure}
+\includegraphics[scale=1]{ijcai_sudoku/fill_iter}
+\caption{The graph shows the average number of rounds needed for all agents to obtain the correct solution, for a given value of copy rate and guess rate when using the \emph{Most Filled} strategy.
+}
+\label{fig:fill_iter}
+\end{figure}
 
-\begin{figure*}[t]
-	\begin{subfigure}[l]{1.0\columnwidth}
-		\includegraphics{fill_iter}
-		\caption{}\label{fig:fill_iter}
-	\end{subfigure}
-	\hfill{}
-	\begin{subfigure}[r]{1.0\columnwidth}
-		\includegraphics{first_iter}
-		\caption{}\label{fig:first_iter}
-	\end{subfigure}
-	\caption{The graphs show the average number of rounds needed for all agents to obtain the correct solution, for a given value of copy rate and guess rate, when using (a) the \emph{Most Filled} strategy; and (b) the \emph{First Positions} strategy, for the scale-free topology.}\label{}
-\end{figure*}
-\setcounter{subfigure}{0}
-\begin{figure*}[t]
-	\begin{subfigure}[l]{1.0\columnwidth}
-		\includegraphics{fill_suc}
-		\caption{}\label{fig:fill_suc}
-	\end{subfigure}
-	\hfill{}
-	\begin{subfigure}[r]{1.0\columnwidth}
-		\includegraphics{first_suc}
-		\caption{}\label{fig:first_suc}
-	\end{subfigure}
-	\caption{The graphs show the proportion of experiments in which all agents obtained the correct solution, for a given value of copy rate and guess rate, when using (a) the \emph{Most Filled} strategy; and (b) the \emph{First Positions} strategy, for the scale-free topology.}\label{}
-\end{figure*}
+\begin{figure}
+\includegraphics[scale=1]{ijcai_sudoku/fill_suc}
+\caption{The graph shows the number of experiments in which all agents obtained the correct solution, for a given value of copy rate and guess rate when using the \emph{Most Filled} strategy.
+}
+\label{fig:fill_suc}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=1]{ijcai_sudoku/first_iter}
+\caption{The graph shows the average number of rounds needed for all agents to obtain the correct solution, for a given value of copy rate and guess rate when using the \emph{First Positions} strategy.
+}
+\label{fig:first_iter}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=1]{ijcai_sudoku/first_suc}
+\caption{The graph shows the number of experiments in which all agents obtained the correct solution, for a given value of copy rate and guess rate when using the \emph{First Positions} strategy.
+}
+\label{fig:first_suc}
+\end{figure}
 
 \subsection{Variation in Copy Rate and Guess Rate}
 
 %--Descrever experimentos
 The authors of~\cite{farenzena:collabem} have stated that, in their settings, {\em "cooperation works because agents can copy each other"}. Basing ourselves in that statement, we adopted the hypothesis that a higher copy rate would improve performance of the network. On the other hand, regarding the process of guessing we took the opposite standing, that it would decrease performance. We based that hypothesis on the notion that, when an agent makes a guess, it has a high chance of filling a cell with the wrong value. Once that happens, that grid will assuredly be unable to lead to the right solution until the agent copies a grid without errors from one of its neighbours. Therefore, we hypothesised that if an agent cannot make a logical move using its level of Sudoku-solving skills, it is better for it to wait for its neighbours to improve the solution and copy from them, instead of risking making an incorrect move.
 
-In order to test our hypotheses, we repeated our experiments for the same four topologies, this time varying the copy rate and guess rate between $0.0$ and $1.0$ each. From our results for each topology, we plotted two surfaces for each strategy. The first shows the average number of rounds needed for the network to converge to the correct solution, and the second the number of experiments in which every agent obtained the correct solution in the limit of 100 rounds.
+In order to test our hypotheses, we repeated our experiments for the same four topologies, this time varying the copy rate and guess rate between $0\%$ and $100\%$ each. From our results for each topology, we plotted two surfaces for each strategy. The first shows the average number of rounds needed for the network to converge to the correct solution, and the second the number of experiments in which every agent obtained the correct solution in the limit of 100 rounds.
 
 %--Descrever resultados
-Fig.~\ref{fig:fill_iter} and Fig.~\ref{fig:first_iter} show the average number of rounds needed for the network to converge to the correct solution for the \emph{Most Filled} and \emph{First Positions} strategy, respectively, in the scale-free topology. They both show a maximum in (copy rate: 0, guess rate: 0) and a minimum in (copy rate: 100, guess rate: 100), with greater copy rate and guess rate decreasing the number of rounds needed for the agents to solve the problem. Similar results were obtained in the other topologies.
+Fig.~\ref{fig:fill_iter} and Fig.~\ref{fig:first_iter} show the average number of rounds needed for the network to converge to the correct solution for the \emph{Most Filled} and \emph{First Positions} strategy, respectively. They both show a maximum in (copy rate: 0, guess rate: 0) and a minimum in (copy rate: 100, guess rate: 100), with greater copy rate and guess rate decreasing the number of rounds needed for the agents to solve the problem.
 
 The results also differ depending on the copying strategy employed in the communication phase. Fig.~\ref{fig:fill_iter} shows that, using the \emph{Most Filled} strategy, as copying increases the number of rounds needed for all agents to have the correct solution decreases sharply until it stabilizes in a roughly optimal level. Similarly, in Fig.~\ref{fig:fill_suc} the number of experiments in which every agent obtains the correct solution rises fast as copying increases. Meanwhile, the benefits of guessing are much less pronounced. On the other hand, when the agents don't evaluate the neighbours' solutions, as can be seen in Fig.~\ref{fig:first_iter} and Fig.~\ref{fig:first_suc}, their contributions don't differ as much.
 
 \section{Discussion}
 \label{sec:discuss}
-
-Below we discuss the results from the previous sections and point out their consequences to the design of collaborative problem-solving systems.
 
 \subsection{A Novel Method For Simulating Human Problem-Solving Networks}
 
@@ -303,7 +304,7 @@ Regarding our hypothesis that a higher copy rate would be beneficial, our experi
 
 Comparing the results of the different copying strategies, it can also be observed that the copy rate has more influence over how fast the correct solution spreads through the network if the agents are evaluating their neighbour's solutions. The increase in performance of the network when copying increases is much faster for the \emph{Most Filled} strategy than for the \emph{First Positions} strategy, while increasing guessing has much less influence. These results confirm that the benefit of copying increases when the neighbours' solutions are evaluated. Meanwhile, when the agents don't evaluate the solutions they get less out of the act of copying, having to rely more on guessing to advance on their own.
 
-\subsection{On the Design of Social Problem-Solving Systems}
+\subsection{Suggestions for the Design of Social Problem-Solving Systems}
 
 Considering the previous results, systems of human computation might take advantage of the interface to encourage selection of better-evaluated solutions. One possibility is to display the evaluation of each solution to encourage players to copy the ones with better score. However, the SAT experiments from~\cite{farenzena:collabem} actually showed the score of each solution displayed to the users, who nevertheless chose according to position rather than evaluation. Another possibility is using the very behaviour of copying the first solutions to the system's advantage. By ordering the neighbours in the interface according to the quality of their solutions, with better-evaluated ones being displayed first, those will be copied more frequently. There is also the possibility suggested by~\cite{farenzena:collabem} of limiting the network's degree. Fewer connections allows for all neighbours to be displayed in the interface at once, without necessity of effort by the user by clicking buttons or scrolling. Moreover, humans might feel more encouraged to evaluate the solutions if they have fewer neighbours to choose from. That result is supported by~\cite{mason:collablearnet}, who limited the number of neighbours to three. In their experiments, the subjects seem to have indeed evaluated the neighbours' solutions, which might indicate this option to be promising.
 
@@ -319,7 +320,7 @@ With these results in mind, we have proposed some suggestions to improve the per
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
 \bibliographystyle{named}
-\bibliography{bib/references}
+\bibliography{Article}
 
 \end{document}
 
